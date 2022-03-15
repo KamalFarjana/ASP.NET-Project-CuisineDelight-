@@ -1,0 +1,85 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FrontEnd.master.cs" Inherits="Project_CuisineDelight.FrontEnd" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>CuisineDelight</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>    
+    <link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />  
+    <link href="../Style/Front-End.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+     <main>
+          <nav class="navbar navbar-inverse navbar-fixed-top">
+           <div class="container-fluid">  
+                    <div class="navbar-header">  
+                       <a class="navbar-brand" runat="server" href="~/Default.aspx"><span style="color:#a852c6">Cuisine</span><span style="color:#33cee1">Delight</span></a>
+                    </div>                  
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/Default.aspx">Home</a></li>
+                        <li><a runat="server" href="~/About.aspx">About Us</a></li>
+                        <li><a runat="server" href="~/FAQ.aspx">FAQ</a></li>
+                        <li><a runat="server" href="~/">Caterers</a></li>
+                        <li><a runat="server" href="~/">Food</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right" id="login-signup">
+                        <asp:LoginView ID="LoginView1" runat="server">
+                            <AnonymousTemplate>
+                                 <li><a runat="server" href="~/SignUp.aspx"><span class="glyphicon glyphicon-user"></span> Signup</a></li>
+                                 <li><a runat="server" href="~/Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>   
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
+                                 <li><a runat="server" href="~/UserProfile.aspx"><span class="glyphicon glyphicon-user"></span><asp:LoginName ID="LoginName1" runat="server" FormatString="{0}" /></a></li>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                                         
+                    </ul> 
+                    <form class="navbar-form navbar-right">
+                        <input  type="search" placeholder="Search" aria-label="Search">
+                        <button type="submit">Search</button>
+                    </form>
+                             
+             </div>  
+         </nav> 
+        <form id="form1" runat="server" >
+            <div>             
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+        </form>
+    </main>
+    <div id="Divfooter">
+             <footer>
+                 <div class="navbar navbar-inverse navbar-fixed-bottom" id="footer">
+                        <div class="container">
+                               <div class="row">
+                                <div class="col-md-5">
+                                   <ul class="nav navbar-nav sc-center">
+                                       <li><a runat="server" href="~/Default.aspx"><span style="color:#a852c6">Cuisine</span><span style="color:#33cee1">Delight</span> </a></li>
+                                       <li><a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button"><i class="fab fa-facebook-f"></i></a></li> 
+                                       <li><a class="btn btn-primary btn-lg btn-floating" style="background-color: #ac2bac;" href="#!"role="button"><i class="fab fa-instagram"></i></a></li>
+                                       <li><a class="btn btn-primary" style="background-color: #25d366;" href="#!" role="button"><i class="fab fa-whatsapp"></i></a></li>
+                                       </ul>
+                                </div>
+                           
+                                <div class="col-md-5">
+                                    <p class="navbar-text sc-center">
+                                        © Right resereved to CuisineDelight
+                                    </p>
+                                </div>
+                                <div class="col-md-2">
+                                    <ul class="nav navbar-nav sc-center">
+                                        <li><a runat="server" href="~/Contact.aspx">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+             </footer>
+        </div>   
+</body>
+ 
+</html>

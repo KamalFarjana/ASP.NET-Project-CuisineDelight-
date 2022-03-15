@@ -1,0 +1,9 @@
+﻿#MainHeader {
+    background-image: url("https://png.pngtree.com/thumb_back/fh260/back_our/20190620/ourmid/pngtree-catering-western-beef-cuisine-image_170055.jpg");
+    background-size: cover;
+    width:100%;
+}
+#heading, #paragraph1{
+    text-align: center;
+    color: white
+}
