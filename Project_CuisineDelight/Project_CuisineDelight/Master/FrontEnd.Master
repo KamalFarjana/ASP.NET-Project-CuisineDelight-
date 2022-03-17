@@ -27,11 +27,11 @@
                     <ul class="nav navbar-nav navbar-right" id="login-signup">
                         <asp:LoginView ID="LoginView1" runat="server">
                             <AnonymousTemplate>
-                                 <li><a runat="server" href="~/SignUp.aspx"><span class="glyphicon glyphicon-user"></span> Signup</a></li>
+                                 <li><a runat="server" href="~/SignUp.aspx"><span class="glyphicon glyphicon-user"></span> Signup  |</a></li>
                                  <li><a runat="server" href="~/Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>   
                             </AnonymousTemplate>
                             <LoggedInTemplate>
-                                 <li><a runat="server" href="~/UserProfile.aspx"><span class="glyphicon glyphicon-user"></span><asp:LoginName ID="LoginName1" runat="server" FormatString="{0}" /></a></li>
+                                 <li><a runat="server" href="~/UserProfile.aspx"><span class="glyphicon glyphicon-user"></span><asp:LoginName ID="LoginName1" runat="server" FormatString=" {0}" /></a></li>
                             </LoggedInTemplate>
                         </asp:LoginView>
                                          

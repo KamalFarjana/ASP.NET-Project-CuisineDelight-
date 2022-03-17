@@ -2,17 +2,23 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-      <div style="margin-top:50px">
+    <div style="margin-top:50px">
              <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
     </div>
-    <div>
-        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" OnCreatedUser="CreateUserWizard1_CreatedUser">
-            <WizardSteps>
+     <div class="container-fluid" style="margin-left:35%">
+      <div class="row">
+        <div class="col"> 
+            <div class="text-center">
+                 <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" OnCreatedUser="CreateUserWizard1_CreatedUser" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="2px" Font-Names="Arial Rounded MT Bold" Font-Size="X-Large" ForeColor="#333333"  Height="200px" Width="500px" >
+                      <ContinueButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Arial Rounded MT Bold" ForeColor="#284E98" />
+                      <CreateUserButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Arial Rounded MT Bold" Font-Size="Large" ForeColor="#284E98" />              
+                     <TitleTextStyle  BackColor="#507CD1" Font-Bold="True" Font-Size="Large" ForeColor="#993366" />
+                      <WizardSteps>
                 <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                     <ContentTemplate>
-                        <table>
+                        <table cellpadding="0" style="height:200px;width:600px;">
                             <tr>
-                                <td align="center" colspan="2">Sign Up</td>
+                                <td align="center" colspan="2" style="color:White;background-color:#507CD1;font-size:Large;font-weight:bold;">Sign Up</td>
                             </tr>
                             <tr>
                                 <td align="right">
@@ -100,7 +106,7 @@
                         <table border="0" cellspacing="5" style="width:100%;height:100%;">
                             <tr align="right">
                                 <td align="right" colspan="0">
-                                    <asp:Button ID="StepNextButton" runat="server" CommandName="MoveNext" Text="Create User" ValidationGroup="CreateUserWizard1" />
+                                    <asp:Button ID="StepNextButton" runat="server" CommandName="MoveNext" Text="Register" ValidationGroup="CreateUserWizard1" Font-Size="Large" Font-Bold="True" BackColor="White" ForeColor="#284E98" BorderColor="#507CD1" BorderStyle="Solid" />
                                 </td>
                             </tr>
                         </table>
@@ -109,6 +115,15 @@
                 <asp:CompleteWizardStep ID="CompleteWizardStep1" runat="server">
                 </asp:CompleteWizardStep>
             </WizardSteps>
-        </asp:CreateUserWizard>
+                      <HeaderStyle BackColor="#284E98" BorderColor="#EFF3FB" BorderStyle="Solid" BorderWidth="2px" Font-Bold="True" Font-Size="0.9em" ForeColor="White" HorizontalAlign="Center" />
+                      <NavigationButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" ForeColor="#284E98" />
+                      <SideBarButtonStyle BackColor="#507CD1" Font-Names="Verdana" ForeColor="White" />
+                      <SideBarStyle BackColor="#507CD1" Font-Size="0.9em" VerticalAlign="Top" />
+                      
+                      <StepStyle Font-Size="0.8em" />
+                 </asp:CreateUserWizard>
+            </div> 
+        </div>       
+      </div>
     </div>
 </asp:Content>
