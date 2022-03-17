@@ -1,0 +1,17 @@
+CREATE TABLE [dbo].[UserDetails] (
+    [Id]        INT              IDENTITY (1, 1) NOT NULL,
+    [FirstName] VARCHAR (50)     NOT NULL,
+    [UserId]    UNIQUEIDENTIFIER NOT NULL,
+    [LastName] NVARCHAR(50) NOT NULL, 
+    [UserType] NVARCHAR(50) NOT NULL, 
+    PRIMARY KEY CLUSTERED ([Id] ASC)
+);
+
+
+
+CREATE PROCEDURE [dbo].[NEW_USER]
+		@userId  uniqueidentifier,
+		@firstname varchar(50)
+AS
+	insert into UserDetails(FirstName, UserId) VALUES(@firstname,@userId)
+RETURN 
