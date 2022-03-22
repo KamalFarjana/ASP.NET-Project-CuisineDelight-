@@ -1,5 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/FrontEnd.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="Project_CuisineDelight.Login" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <style type="text/css">
+        .auto-style1 {
+            height: 38px;
+        }
+    </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
       <div style="margin-top:50px">
@@ -33,10 +38,10 @@
                                              </td>
                                          </tr>
                                          <tr>
-                                             <td align="right">
+                                             <td align="right" class="auto-style1">
                                                  <asp:Label ID="PasswordLabel" runat="server" AssociatedControlID="Password">Password:</asp:Label>
                                              </td>
-                                             <td>
+                                             <td class="auto-style1">
                                                  <asp:TextBox ID="Password" runat="server" Font-Size="Large" TextMode="Password"></asp:TextBox>
                                                  <asp:RequiredFieldValidator ID="PasswordRequired" runat="server" ControlToValidate="Password" ErrorMessage="Password is required." ToolTip="Password is required." ValidationGroup="ctl07$Login1">*</asp:RequiredFieldValidator>
                                              </td>
@@ -72,9 +77,21 @@
                      <TextBoxStyle Font-Size="Large" />
                      <TitleTextStyle BackColor="#507CD1" Font-Bold="True"  Font-Size="Large" ForeColor="White" />
                  </asp:Login>
+                   
                </AnonymousTemplate>
+             
                <LoggedInTemplate>
-                   You are already logged in.
+                   <div style="width: 600px; height:200px; font-family: 'Arial Rounded MT Bold'; font-size: large; background-color: #000000;">
+                       <p style="font-family: 'Arial Rounded MT Bold'; font-size: large; padding:3em; background-color: #000000; color: #FFFFFF;">
+
+                       
+                       Are you sure you want to Logout?
+                       <br />
+                       Click here 
+                        <asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/Default.aspx" />
+                   </p>
+                           </div>
+                 
                </LoggedInTemplate>
           </asp:LoginView>
        </div>       

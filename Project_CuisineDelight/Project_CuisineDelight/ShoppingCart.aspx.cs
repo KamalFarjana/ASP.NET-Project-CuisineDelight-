@@ -7,11 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace Project_CuisineDelight
 {
-	public partial class ForgotPassword1 : System.Web.UI.Page
-	{
-		protected void Page_Load(object sender, EventArgs e)
-		{
+    public partial class ShoppingCart : System.Web.UI.Page
+    {
+        protected void Page_Load(object sender, EventArgs e)
+        {
 
-		}
-	}
+        }
+    }
 }

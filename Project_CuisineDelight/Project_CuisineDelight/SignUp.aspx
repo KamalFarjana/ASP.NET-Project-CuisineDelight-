@@ -5,18 +5,20 @@
     <div style="margin-top:50px">
              <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
     </div>
-     <div class="container-fluid" style="margin-left:35%">
+     <div class="container-fluid" style="margin-left:30%">
       <div class="row">
         <div class="col"> 
             <div class="text-center">
-                 <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" OnCreatedUser="CreateUserWizard1_CreatedUser" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="2px" Font-Names="Arial Rounded MT Bold" Font-Size="X-Large" ForeColor="#333333"  Height="200px" Width="500px" >
+                 <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" OnCreatedUser="CreateUserWizard1_CreatedUser" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="2px" Font-Names="Arial Rounded MT Bold" Font-Size="X-Large" ForeColor="#333333"  Height="200px" Width="500px" ContinueDestinationPageUrl="~/Default.aspx" >
                       <ContinueButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Arial Rounded MT Bold" ForeColor="#284E98" />
                       <CreateUserButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Arial Rounded MT Bold" Font-Size="Large" ForeColor="#284E98" />              
+                      <MailDefinition Subject="Your New Account at CuisineDelight Website" BodyFileName="~/App_Data/SignupConfirmation.txt">
+                      </MailDefinition>
                      <TitleTextStyle  BackColor="#507CD1" Font-Bold="True" Font-Size="Large" ForeColor="#993366" />
                       <WizardSteps>
                 <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server">
                     <ContentTemplate>
-                        <table cellpadding="0" style="height:200px;width:600px;">
+                        <table cellpadding="0" style="height:200px;width:600px; margin-top: 0px;">
                             <tr>
                                 <td align="center" colspan="2" style="color:White;background-color:#507CD1;font-size:Large;font-weight:bold;">Sign Up</td>
                             </tr>
