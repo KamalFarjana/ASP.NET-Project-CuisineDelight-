@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col">    
             <div class="jumbotron" id="MainHeader">
-                <h1 id="heading">Welcome to CuiseDelight</h1>
+                <h1 id="heading">Welcome to CuisineDelight</h1>
                 <p id="paragraph1">
                     <em>We are happy to have you!</em> <br />
                     <em>Just one click and get your desire food</em> 
