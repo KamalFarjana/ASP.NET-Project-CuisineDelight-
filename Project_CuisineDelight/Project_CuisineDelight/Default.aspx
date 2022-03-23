@@ -5,7 +5,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
  
- <div class="container-fluid" >
+ <div class="container-fluid">
       <div class="row">
         <div class="col">    
             <div class="jumbotron" id="MainHeader">
@@ -20,7 +20,7 @@
      <div class="row">
           <div class="col-md-6">  
               <div class="text-center">
-                     <asp:Image onclick="window.location='Caterer.aspx'" ID="Image1" runat="server" ImageUrl="https://cdn-icons-png.flaticon.com/512/1940/1940981.png" />                        
+                     <asp:Image onclick="window.location='Caterer.aspx'" ID="Image1" runat="server" Height="400px" Width="500px" ImageUrl="https://cdn-icons-png.flaticon.com/512/1940/1940981.png" />                        
               </div>
               <div class="text-center">
                   <asp:Button ID="Button1" runat="server" Text="Select Your Caterer" BackColor="#CCCCFF" BorderColor="Black" BorderStyle="Solid" BorderWidth="5px" ForeColor="#990099" Height="50px" Width="173px" PostBackUrl="~/Caterer.aspx" />
@@ -29,7 +29,7 @@
 
           <div class="col-md-6">  
                <div class="text-center">
-                       <asp:Image onclick="window.location='Food.aspx'" ID="Image4" runat="server" ImageUrl="https://i.pinimg.com/564x/dd/9d/c9/dd9dc9d83423bc037b511d73b29e6b80.jpg" />           
+                       <asp:Image onclick="window.location='Food.aspx'" ID="Image4" runat="server" Height="400px" Width="500px"  ImageUrl="https://i.pinimg.com/564x/dd/9d/c9/dd9dc9d83423bc037b511d73b29e6b80.jpg" />           
               </div>
                <div class="text-center">
                    <asp:Button ID="Button2" runat="server" Text="Select Your Food" BackColor="#CCCCFF" BorderColor="Black" BorderStyle="Solid" BorderWidth="5px" ForeColor="#990099" Height="50px" Width="173px" PostBackUrl="~/Food.aspx" />                      
