@@ -21,8 +21,8 @@
                         <li><a runat="server" href="~/Default.aspx">Home</a></li>
                         <li><a runat="server" href="~/About.aspx">About Us</a></li>
                         <li><a runat="server" href="~/FAQ.aspx">FAQ</a></li>
-                        <li><a runat="server" href="~/">Caterers</a></li>
-                        <li><a runat="server" href="~/">Food</a></li>
+                        <li><a runat="server" href="~/Caterer.aspx">Caterers</a></li>
+                        <li><a runat="server" href="~/Food.aspx">Food</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right" id="login-signup">
                         <asp:LoginView ID="LoginView1" runat="server">
@@ -46,13 +46,14 @@
                              
              </div>  
          </nav> 
-        <form id="form1" runat="server" >
+        <form id="form1" runat="server" style="margin-top:3.5em; margin-bottom:5em">
             <div>             
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
         </form>
     </main>
+
     <div id="Divfooter">
              <footer>
                  <div class="navbar navbar-inverse navbar-fixed-bottom" id="footer">
@@ -61,7 +62,7 @@
                                 <div class="col-md-5">
                                    <ul class="nav navbar-nav sc-center">
                                        <li><a runat="server" href="~/Default.aspx"><span style="color:#a852c6">Cuisine</span><span style="color:#33cee1">Delight</span> </a></li>
-                                       <li><a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button"><i class="fab fa-facebook-f"></i></a></li> 
+                                       <li><a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button"><i class="fa fa-facebook"></i></a></li> 
                                        <li><a class="btn btn-primary btn-lg btn-floating" style="background-color: #ac2bac;" href="#!"role="button"><i class="fab fa-instagram"></i></a></li>
                                        <li><a class="btn btn-primary" style="background-color: #25d366;" href="#!" role="button"><i class="fab fa-whatsapp"></i></a></li>
                                        </ul>
