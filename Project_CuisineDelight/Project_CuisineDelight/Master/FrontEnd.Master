@@ -6,9 +6,10 @@
 <head runat="server">
     <title>CuisineDelight</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>    
+    </asp:ContentPlaceHolder>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />  
-    <link href="../Style/Front-End.css" rel="stylesheet" type="text/css" />
+    
 </head>
 <body>
      <main >
@@ -61,10 +62,11 @@
                                <div class="row">
                                 <div class="col-md-5">
                                    <ul class="nav navbar-nav sc-center">
-                                       <li><a runat="server" href="~/Default.aspx"><span style="color:#a852c6">Cuisine</span><span style="color:#33cee1">Delight</span> </a></li>
-                                       <li><a class="btn btn-primary" style="background-color: #3b5998;" href="#!" role="button"><i class="fa fa-facebook"></i></a></li> 
-                                       <li><a class="btn btn-primary btn-lg btn-floating" style="background-color: #ac2bac;" href="#!"role="button"><i class="fab fa-instagram"></i></a></li>
-                                       <li><a class="btn btn-primary" style="background-color: #25d366;" href="#!" role="button"><i class="fab fa-whatsapp"></i></a></li>
+                                       <li><a runat="server" href="~/Default.aspx"><span style="color:#a852c6">Cuisine</span><span style="color:#33cee1">Delight</span> </a></li>                                      
+                                       <li><i class="fa fa-twitter" style="font-size:30px;color:cornflowerblue;margin-left: 2px;margin-top:8px"></i></li> 
+                                       <li><i class="fa fa-facebook-official" style="font-size:30px;color:deepskyblue;margin-left: 2px;margin-top:8px"></i></li>
+                                       <li><i class="fa fa-instagram" style="font-size:30px;color:deeppink;margin-left: 2px;margin-top:8px"></i></li>
+                                       <li><i class="fa fa-whatsapp" style="font-size:30px;color:lawngreen;margin-left: 2px;margin-top:8px"></i></li>
                                        </ul>
                                 </div>
                            
