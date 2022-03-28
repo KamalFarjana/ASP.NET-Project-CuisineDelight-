@@ -173,6 +173,7 @@
     <Content Include="SignUp.aspx" />
     <Content Include="Site.Master" />
     <Content Include="Style\Default.css" />
+    <Content Include="Style\FAQ.css" />
     <Content Include="Style\Front-End.css" />
     <Content Include="Style\LoginAndSignUp.css" />
     <Content Include="UserProfile.aspx" />
