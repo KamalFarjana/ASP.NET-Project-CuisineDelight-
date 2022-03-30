@@ -77,7 +77,17 @@
                                 </td>
                             </tr>
                           
-                            
+                            <tr>
+                                <td align="right">
+                                    <asp:Label ID="MobileNumberLabel" runat="server" AssociatedControlID="MobileNumber">Mobile Number:</asp:Label>
+                                </td>
+                                <td>
+                                    <asp:TextBox ID="MobileNumber" runat="server"></asp:TextBox>
+                                   
+                                    <asp:RegularExpressionValidator ID="MobileNumberValidation" runat="server" Display="Dynamic" ErrorMessage="Invalid phone number. Mobile number Should be xxx-xxx-xxxx format" ValidationExpression="[0-9]{3}-[0-9]{3}-[0-9]{4}" ControlToValidate="MobileNumber" ValidationGroup="CreateUserWizard1"></asp:RegularExpressionValidator>
+                                </td>
+                                
+                            </tr>
                             
                             <tr>
                                 <td align="right">

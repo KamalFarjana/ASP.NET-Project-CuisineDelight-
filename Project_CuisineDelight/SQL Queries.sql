@@ -15,3 +15,12 @@ CREATE PROCEDURE [dbo].[NEW_USER]
 AS
 	insert into UserDetails(FirstName, UserId,LastName,UserType) VALUES(@firstname,@userId,@Lastname,@UserType )
 RETURN
+
+CREATE PROCEDURE [dbo].[EditUserInfo]
+		@userId  uniqueidentifier,
+		@firstname varchar(50),
+		@Lastname varchar(50),
+		@Mobileno varchar(50)
+AS
+	UPDATE UserDetails SET FirstName=@firstname,LastName=@Lastname,MobileNumber=@Mobileno WHERE UserId=@userId
+RETURN

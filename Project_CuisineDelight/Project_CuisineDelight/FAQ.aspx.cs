@@ -18,8 +18,6 @@ namespace Project_CuisineDelight
         {
             LinkButton btn = (LinkButton)(sender);
             String FAQnumber = btn.CommandArgument;
-
-
             switch (FAQnumber){
                 case "1":
                     FAQanswer1.Visible = !FAQanswer1.Visible;

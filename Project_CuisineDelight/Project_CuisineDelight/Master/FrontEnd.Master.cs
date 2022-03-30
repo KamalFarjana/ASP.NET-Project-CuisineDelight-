@@ -20,7 +20,7 @@ namespace Project_CuisineDelight
         {
             Session.Abandon();
             Session.Clear();
-            Response.Redirect("Login.aspx");
+            Response.Redirect("~/Login.aspx");
         }
    
 

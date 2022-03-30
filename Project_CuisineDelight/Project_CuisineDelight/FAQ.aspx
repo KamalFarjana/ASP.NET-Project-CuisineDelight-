@@ -18,7 +18,7 @@
          <div class="row" >
                 <div class="col">    
                       <div class="FAQ" style="background-color: #C0C0C0">                       
-                          <asp:LinkButton ID="FAQbutton" CommandArgument="1" runat="server" OnClick="LinkButton_Click"><span class="glyphicon glyphicon-plus-sign"></span>  What CuisineDelight serves?</asp:LinkButton>                        
+                          <asp:LinkButton ID="FAQbutton" CommandArgument="1" runat="server" OnClick="LinkButton_Click"><span class="glyphicon glyphicon-plus-sign" runat="server" id="Qsicon"></span>  What CuisineDelight serves?</asp:LinkButton>                        
                       </div>
                      <div ID="FAQanswer1" runat="server" visible="false">
                           <p class="answer"><span class="glyphicon glyphicon-ok"></span>  It is an online collaborative catering service from where users can place an order with their friends and family as a team </p>
