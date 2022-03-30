@@ -116,13 +116,14 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="App_Data\SignupConfirmation.txt" />
-    <Content Include="Caterer.aspx" />
+    <Content Include="Caterer\Caterer.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Customer\UserProfileForm.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="FAQ.aspx" />
     <Content Include="favicon.ico" />
@@ -140,6 +141,8 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Login.aspx" />
     <Content Include="Master\FrontEnd.Master" />
+    <Content Include="Profile Pictures\istockphoto-1293539824-170667a.jpg" />
+    <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -175,7 +178,7 @@
     <Content Include="Style\Default.css" />
     <Content Include="Style\FAQ.css" />
     <Content Include="Style\LoginAndSignUp.css" />
-    <Content Include="UserProfile.aspx" />
+    <Content Include="Customer\UserProfile.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
@@ -192,11 +195,11 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Caterer.aspx.cs">
+    <Compile Include="Caterer\Caterer.aspx.cs">
       <DependentUpon>Caterer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Caterer.aspx.designer.cs">
+    <Compile Include="Caterer\Caterer.aspx.designer.cs">
       <DependentUpon>Caterer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
@@ -206,6 +209,14 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Customer\UserProfileForm.ascx.cs">
+      <DependentUpon>UserProfileForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\UserProfileForm.ascx.designer.cs">
+      <DependentUpon>UserProfileForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="DataAccess.cs" />
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -280,11 +291,11 @@
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
-    <Compile Include="UserProfile.aspx.cs">
+    <Compile Include="Customer\UserProfile.aspx.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="UserProfile.aspx.designer.cs">
+    <Compile Include="Customer\UserProfile.aspx.designer.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
@@ -293,6 +304,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup />

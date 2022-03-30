@@ -26,6 +26,7 @@ namespace Project_CuisineDelight
             TextBox firstname = (TextBox)CreateUserWizardStep1.ContentTemplateContainer.FindControl("FirstName");
             TextBox lastname = (TextBox)CreateUserWizardStep1.ContentTemplateContainer.FindControl("LastName");
             TextBox email = (TextBox)CreateUserWizardStep1.ContentTemplateContainer.FindControl("Email");
+            TextBox mobileNo = (TextBox)CreateUserWizardStep1.ContentTemplateContainer.FindControl("MobileNumber");
             String Customer = "1";
             using (SqlConnection myconnection=new SqlConnection(connectionString))
             {
@@ -35,6 +36,7 @@ namespace Project_CuisineDelight
                 mycommand.Parameters.Add("@Lastname", SqlDbType.VarChar).Value = lastname.Text;
                 mycommand.Parameters.Add("@UserType", SqlDbType.VarChar).Value = Customer;
                 mycommand.Parameters.Add("@userId", SqlDbType.UniqueIdentifier).Value = newuserid;
+                mycommand.Parameters.Add("@Mobileno", SqlDbType.VarChar).Value = mobileNo.Text;
                 myconnection.Open();
                 mycommand.ExecuteNonQuery();
                 myconnection.Close();
