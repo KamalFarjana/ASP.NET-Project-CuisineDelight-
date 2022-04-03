@@ -116,7 +116,10 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="App_Data\SignupConfirmation.txt" />
-    <Content Include="Caterer\Caterer.aspx" />
+    <Content Include="Caterer.aspx" />
+    <Content Include="CatererFolder\CatererAddingItem.aspx" />
+    <Content Include="CatererFolder\CatererMenu.aspx" />
+    <Content Include="CatererFolder\ItemImage\default-placeholder.png" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -195,12 +198,26 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Caterer\Caterer.aspx.cs">
+    <Compile Include="Caterer.aspx.cs">
       <DependentUpon>Caterer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Caterer\Caterer.aspx.designer.cs">
+    <Compile Include="Caterer.aspx.designer.cs">
       <DependentUpon>Caterer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\CatererAddingItem.aspx.cs">
+      <DependentUpon>CatererAddingItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\CatererAddingItem.aspx.designer.cs">
+      <DependentUpon>CatererAddingItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\CatererMenu.aspx.cs">
+      <DependentUpon>CatererMenu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\CatererMenu.aspx.designer.cs">
+      <DependentUpon>CatererMenu.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
