@@ -51,7 +51,7 @@
                 </tr>
                 <tr >
                     <td></td>
-                    <td>
+                    <td align="center" >
                         <asp:Button ID="AddItemBtn" runat="server" Text="Submit" OnClick="AddItemBtn_Click" class="btn btn-secondary btn-lg"/>
                     </td>
                     <td></td>

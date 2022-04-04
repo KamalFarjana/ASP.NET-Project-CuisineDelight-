@@ -20,8 +20,6 @@ namespace Project_CuisineDelight.Customer
         {
             Session["UserName"] = Membership.GetUser().UserName;
             string Username = Session["UserName"].ToString();
-
-            Console.WriteLine(Username);
             if (!IsPostBack)
             {
                 UserProfileView.DataSource = DataAccess.SelectQuery("SELECT u.FirstName, u.LastName, m.Email, u.MobileNumber from UserDetails as u INNER JOIN Memberships as m ON  u.UserId = m.UserId where u.UserId in (SELECT UserId FROM Users where UserName = '" + Username + "')");

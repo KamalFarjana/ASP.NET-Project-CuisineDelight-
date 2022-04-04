@@ -1,12 +1,47 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/FrontEnd.Master" AutoEventWireup="true" CodeBehind="CatererMenu.aspx.cs" Inherits="Project_CuisineDelight.CatererFolder.CatererMenu" %>
+
+<%@ Register Src="~/CatererFolder/ListItemOfCaterer.ascx" TagPrefix="uc1" TagName="ListItemOfCaterer" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <div>
+    <asp:LoginView ID="LoginView1" runat="server">
+        <LoggedInTemplate>
+            <div>
              <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
-    </div>
-    <div>
-        <asp:Button ID="Button1" runat="server" Text="Button"  PostBackUrl="~/CatererFolder/CatererAddingItem.aspx"/>
-    </div>
-
+            </div>
+            <div class="container py-4 container-fluid">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Items</h1>
+                </div>
+                <hr />
+                <div class="row">
+                    <div class="col">
+                         <asp:Button ID="Button1" runat="server" Text="Add Item"  PostBackUrl="~/CatererFolder/CatererAddingItem.aspx"/>
+                        
+                         <uc1:ListItemOfCaterer runat="server" id="ListItemOfCaterer" />
+                    </div>
+                    
+                    
+                 </div>
+                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Packages</h1>
+                </div>
+                <hr />
+                 <div class="row">
+                    <div class="col">
+                         <asp:Button ID="Button3" runat="server" Text="Add Package"  PostBackUrl="~/CatererFolder/AddingPackage.aspx"/>
+                        
+                         
+                    </div>
+                    
+                    
+                 </div>
+                
+            </div>
+           
+           
+        </LoggedInTemplate>
+    </asp:LoginView>
+     
 </asp:Content>
