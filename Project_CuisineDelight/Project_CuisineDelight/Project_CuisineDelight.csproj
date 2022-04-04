@@ -117,9 +117,14 @@
     <Content Include="About.aspx" />
     <Content Include="App_Data\SignupConfirmation.txt" />
     <Content Include="Caterer.aspx" />
+    <Content Include="CatererFolder\AddingPackage.aspx" />
     <Content Include="CatererFolder\CatererAddingItem.aspx" />
     <Content Include="CatererFolder\CatererMenu.aspx" />
+    <Content Include="CatererFolder\Delete.aspx" />
+    <Content Include="CatererFolder\EditListedItem.ascx" />
+    <Content Include="CatererFolder\EditListedItem.aspx" />
     <Content Include="CatererFolder\ItemImage\default-placeholder.png" />
+    <Content Include="CatererFolder\ListItemOfCaterer.ascx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -205,6 +210,13 @@
     <Compile Include="Caterer.aspx.designer.cs">
       <DependentUpon>Caterer.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CatererFolder\AddingPackage.aspx.cs">
+      <DependentUpon>AddingPackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\AddingPackage.aspx.designer.cs">
+      <DependentUpon>AddingPackage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CatererFolder\CatererAddingItem.aspx.cs">
       <DependentUpon>CatererAddingItem.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -218,6 +230,34 @@
     </Compile>
     <Compile Include="CatererFolder\CatererMenu.aspx.designer.cs">
       <DependentUpon>CatererMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\Delete.aspx.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\Delete.aspx.designer.cs">
+      <DependentUpon>Delete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\EditListedItem.ascx.cs">
+      <DependentUpon>EditListedItem.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\EditListedItem.ascx.designer.cs">
+      <DependentUpon>EditListedItem.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\EditListedItem.aspx.cs">
+      <DependentUpon>EditListedItem.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\EditListedItem.aspx.designer.cs">
+      <DependentUpon>EditListedItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\ListItemOfCaterer.ascx.cs">
+      <DependentUpon>ListItemOfCaterer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\ListItemOfCaterer.ascx.designer.cs">
+      <DependentUpon>ListItemOfCaterer.ascx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -330,7 +370,9 @@
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="CatererFolder\PackageImage\" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />

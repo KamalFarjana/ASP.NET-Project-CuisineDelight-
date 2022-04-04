@@ -11,7 +11,7 @@ namespace Project_CuisineDelight.CatererFolder
 {
 
 
-    public partial class CatererMenu
+    public partial class EditListedItem
     {
 
         /// <summary>
