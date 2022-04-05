@@ -82,9 +82,12 @@ namespace Project_CuisineDelight.CatererFolder
                         if (k > 0)
                         {
                             msg.Text = "You have successfully edited the item";
+                            FormView1.DataSource = DataAccess.SelectQuery("SELECT * FROM Items WHERE Item_ID=" + IDCAT);
+
+                            FormView1.DataBind();
                         }
                         myconnection.Close();
-                        Response.Redirect("~/CatererFolder/CatererMenu", true);
+                      
                     }
 
 
