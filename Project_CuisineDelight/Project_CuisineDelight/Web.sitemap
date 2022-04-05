@@ -13,6 +13,9 @@
 			<siteMapNode url="~/ForgotPassword" title="Forgot Password"  description="Forgot Password"/>
 		</siteMapNode>
 
-		<siteMapNode url="~/SignUp" title="Signup"  description="Signup" >    </siteMapNode>
+		<siteMapNode url="~/SignupSelectionAsCustomerORCaterer" title="Signup"  description="Signup" >
+			<siteMapNode url="~/SignUp" title="SignUp as a Customer"  description="SignUp as a Customer"/>
+			<siteMapNode url="~/SignupCaterer" title="SignUp as a Caterer"  description="SignUp as a Caterer"/>
+		</siteMapNode>
 	</siteMapNode>
 </siteMap>
