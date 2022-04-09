@@ -1,6 +1,6 @@
 CREATE PROCEDURE [dbo].[AddingItemtoPackages]
-		@Package_ID INT, 
-		@Item_ID INT, 
+		@Package_ID INT,
+		@Item_ID INT,
 		@Quantity int,
 		@Item_Name NVARCHAR (150)
 AS
@@ -26,9 +26,10 @@ CREATE PROCEDURE [dbo].[AddItem]
 		@Item_Name  NVARCHAR (150),
 		@Item_Desc NVARCHAR (150),
 		@Item_Price int,
-		@Item_Image  NVARCHAR (150)
+		@Item_Image  NVARCHAR (150),
+		@Item_Type NVARCHAR (50)
 AS
-	insert into Items(UserId,Item_Name,Item_Desc, Item_Price, Item_Image) VALUES(@userId,@Item_Name  ,@Item_Desc,@Item_Price,@Item_Image)
+	insert into Items(UserId,Item_Name,Item_Desc, Item_Price, Item_Image, Item_Type) VALUES(@userId,@Item_Name  ,@Item_Desc,@Item_Price,@Item_Image,@Item_Type)
 RETURN
 ---------------------------------------------
 
@@ -56,9 +57,10 @@ CREATE PROCEDURE [dbo].[EditItem]
 		@Item_Name  NVARCHAR (150),
 		@Item_Desc NVARCHAR (150),
 		@Item_Price int,
-		@Item_Image  NVARCHAR (150)
+		@Item_Image  NVARCHAR (150),
+		@Item_Type  NVARCHAR (50)
 AS
-	UPDATE Items SET Item_Name=@Item_Name,Item_Desc=@Item_Desc,Item_Price=@Item_Price, Item_Image=@Item_Image WHERE Item_ID=@Item_ID
+	UPDATE Items SET Item_Name=@Item_Name,Item_Desc=@Item_Desc,Item_Price=@Item_Price, Item_Image=@Item_Image, Item_Type =@Item_Type  WHERE Item_ID=@Item_ID
 RETURN
 
 ------------------------------
@@ -67,10 +69,10 @@ CREATE PROCEDURE [dbo].[EditPackage]
 		 @Package_ID      INT  ,
 		 @Package_Name    NVARCHAR (50),
 		 @Package_Desc    NVARCHAR (500),
-		 @Package_Discount INT,  
+		 @Package_Discount INT,
 		 @Package_Image  NVARCHAR (100)
 AS
-	UPDATE Packages SET Package_Name=@Package_Name, Package_Desc  = @Package_Desc,Package_Discount=@Package_Discount, Package_Image = @Package_Image  WHERE  Package_ID = @Package_ID 
+	UPDATE Packages SET Package_Name=@Package_Name, Package_Desc  = @Package_Desc,Package_Discount=@Package_Discount, Package_Image = @Package_Image  WHERE  Package_ID = @Package_ID
 RETURN
 --------------------------------
 
@@ -106,11 +108,11 @@ AS
 RETURN
 
 CREATE PROCEDURE [dbo].[UpdateItemtoPackages]
-		@Package_ID INT, 
-		@Item_ID INT, 
+		@Package_ID INT,
+		@Item_ID INT,
 		@Quantity int,
 		@Item_Name NVARCHAR (150)
 AS
-	update PackageItems set Quantity=@Quantity where Package_ID= @Package_ID and Item_ID=@Item_ID 
+	update PackageItems set Quantity=@Quantity where Package_ID= @Package_ID and Item_ID=@Item_ID
 
 RETURN
