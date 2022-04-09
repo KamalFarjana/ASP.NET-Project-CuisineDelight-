@@ -106,7 +106,7 @@ AS
    insert into UserDetails(UserId,UserType,MobileNumber) VALUES(@userId,@UserType,@Mobileno )
    insert into CatererDetails(UserId,Description) values (@userId, @description)
 RETURN
-
+------------------------------------------------------------
 CREATE PROCEDURE [dbo].[UpdateItemtoPackages]
 		@Package_ID INT,
 		@Item_ID INT,
@@ -116,3 +116,11 @@ AS
 	update PackageItems set Quantity=@Quantity where Package_ID= @Package_ID and Item_ID=@Item_ID
 
 RETURN
+------------------------------------------
+CREATE PROCEDURE [dbo].[UpdatePrice]
+	@Package_ID INT,
+	@Package_Price  NCHAR (10)
+AS
+
+Update Packages  set Package_Price= @Package_Price where Package_ID = @Package_ID
+RETURN 0
