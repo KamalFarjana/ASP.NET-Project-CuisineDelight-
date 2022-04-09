@@ -30,6 +30,7 @@ namespace Project_CuisineDelight.CatererFolder
                 TextBox itemDesciption = (TextBox)LoginView1.FindControl("ItemDesciption");
                 TextBox itemPrice = (TextBox)LoginView1.FindControl("ItemPrice");
                 FileUpload uploadedFile = (FileUpload)LoginView1.FindControl("ItemImage");
+                DropDownList ddl = (DropDownList)LoginView1.FindControl("ItemDropDownList");
                 Label msg = (Label)LoginView1.FindControl("SuccessMsg");
                 if (uploadedFile.PostedFile != null && uploadedFile.PostedFile.ContentLength>0)
                 {
@@ -46,6 +47,8 @@ namespace Project_CuisineDelight.CatererFolder
                     mycommand.Parameters.Add("@Item_Price", SqlDbType.Int).Value = int.TryParse(itemPrice.Text, out x);
                     mycommand.Parameters.Add("@userId", SqlDbType.UniqueIdentifier).Value = newuserid;
                     mycommand.Parameters.Add("@Item_Image", SqlDbType.VarChar).Value = (uploadedFile.FileName).ToString();
+                    mycommand.Parameters.Add("@Item_Type", SqlDbType.VarChar).Value = ddl.SelectedItem.Text;
+                    
                     myconnection.Open();
                     int k=mycommand.ExecuteNonQuery();
                     if (k > 0)

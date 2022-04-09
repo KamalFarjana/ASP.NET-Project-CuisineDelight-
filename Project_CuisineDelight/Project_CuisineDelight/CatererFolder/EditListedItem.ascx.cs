@@ -43,13 +43,16 @@ namespace Project_CuisineDelight.CatererFolder
                 if (IDCAT != null)
 
                 {
+                    string itemType;
                     bool flag = false;
                     TextBox itemName = (TextBox)FormView1.FindControl("ItemName");
                     TextBox itemDesciption = (TextBox)FormView1.FindControl("ItemDesciption");
                     TextBox itemPrice = (TextBox)FormView1.FindControl("ItemPrice");
+                    TextBox itmTyp = (TextBox)FormView1.FindControl("ItemType");
                     FileUpload uploadedFile = (FileUpload)FormView1.FindControl("ItemImage");
                     Image ExistingImage = (Image)FormView1.FindControl("ItemImageDB");
                     Label msg = (Label)FormView1.FindControl("SuccessMsg");
+                    DropDownList ddl = (DropDownList)FormView1.FindControl("ItemDropDownList");
                     if (uploadedFile.PostedFile != null && uploadedFile.PostedFile.ContentLength > 0)
                     {
                         string ImageName = uploadedFile.FileName;
@@ -60,14 +63,23 @@ namespace Project_CuisineDelight.CatererFolder
                         
                         flag = true;
                     }
+                    if (ddl.SelectedValue == "0")
+                    {
+                       itemType = itmTyp.Text;
+                    }
+                    else
+                    {
+                        itemType = ddl.SelectedItem.Text;
+                    } 
                     using (SqlConnection myconnection = new SqlConnection(connectionString))
                     {
-                        int x = 0,y=0;
+                        
                         SqlCommand mycommand = new SqlCommand("EditItem", myconnection);
                         mycommand.CommandType = CommandType.StoredProcedure;
                         mycommand.Parameters.Add("@Item_Name", SqlDbType.VarChar).Value = itemName.Text;
                         mycommand.Parameters.Add("@Item_Desc", SqlDbType.VarChar).Value = itemDesciption.Text;
                         mycommand.Parameters.Add("@Item_Price", SqlDbType.Int).Value = int.Parse(itemPrice.Text);
+                        mycommand.Parameters.Add("@Item_Type", SqlDbType.VarChar).Value = itemType;
                         if (!flag)
                         {
                             mycommand.Parameters.Add("@Item_Image", SqlDbType.VarChar).Value = (uploadedFile.FileName).ToString();
@@ -76,6 +88,7 @@ namespace Project_CuisineDelight.CatererFolder
                         {
                             mycommand.Parameters.Add("@Item_Image", SqlDbType.VarChar).Value = Path.GetFileName(ExistingImage.ImageUrl);
                         }
+                       
                         mycommand.Parameters.Add("@Item_ID", SqlDbType.Int).Value = int.Parse(IDCAT);
                         myconnection.Open();
                         int k = mycommand.ExecuteNonQuery();
