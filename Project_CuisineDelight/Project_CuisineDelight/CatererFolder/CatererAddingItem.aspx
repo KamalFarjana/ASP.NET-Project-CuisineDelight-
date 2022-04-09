@@ -66,8 +66,12 @@
                             <asp:ListItem Text="Vegan" Value="15" />
                             <asp:ListItem Text="Bakery" Value="16" />
                             <asp:ListItem Text="Japanese" Value="17" />
-                             <asp:ListItem Text="Others" Value="18" />
-                        </asp:DropDownList></td>
+                         <asp:ListItem Text="Pakistani" Value="18" />
+                         <asp:ListItem Text="Biriyani" Value="19" />
+                         <asp:ListItem Text="Rice" Value="20" />
+                        <asp:ListItem Text="Starter" Value="21" />
+                             <asp:ListItem Text="Others" Value="22" />
+                        </asp:DropDownList> </td>
                     <td><asp:RequiredFieldValidator ID="ItemTypeValidator" runat="server" ErrorMessage="Select type of your item"  ControlToValidate="ItemDropDownList"></asp:RequiredFieldValidator></td>
                 </tr>
                 <tr>

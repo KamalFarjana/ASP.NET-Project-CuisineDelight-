@@ -63,7 +63,7 @@ namespace Project_CuisineDelight.CatererFolder
                         
                         flag = true;
                     }
-                    if (ddl.SelectedItem.Text == "0")
+                    if (ddl.SelectedValue == "0")
                     {
                        itemType = itmTyp.Text;
                     }
