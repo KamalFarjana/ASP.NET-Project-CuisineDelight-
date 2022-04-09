@@ -21,7 +21,7 @@ namespace Project_CuisineDelight.CatererFolder
             string IDCAT = Request.QueryString["IDCAT"];
             if (!IsPostBack)
             {
-
+               
                 LoadGrid();
             }
         }
@@ -34,9 +34,11 @@ namespace Project_CuisineDelight.CatererFolder
 
                 {
                     bool flag = false;
+                    
                     TextBox PackageName = (TextBox)FormView1.FindControl("PackageName");
                     TextBox PackageDesciption = (TextBox)FormView1.FindControl("PackageDesciption");
                     TextBox PackageDiscount = (TextBox)FormView1.FindControl("PackageDiscount");
+                    TextBox PackagePrice = (TextBox)FormView1.FindControl("PackagePrice");
                     FileUpload uploadedFile = (FileUpload)FormView1.FindControl("PackageImage");
                     Image ExistingImage = (Image)FormView1.FindControl("PackageImageDB");
                     Label msg = (Label)FormView1.FindControl("SuccessMsg");
@@ -79,13 +81,46 @@ namespace Project_CuisineDelight.CatererFolder
 
                     }
 
+                    
 
                 }
-
+                UpdatePrice();
 
             }
             LoadGrid();
 
+        }
+        private void UpdatePrice()
+        {
+            string IDCAT = Request.QueryString["IDCAT"];
+            int GettingPackageID = int.Parse(IDCAT);
+            Session["UserName"] = Membership.GetUser().UserName;
+            string Username = Session["UserName"].ToString();
+            SqlConnection con = new SqlConnection(connectionString);
+            
+            con.Open();
+            SqlCommand com = new SqlCommand("Select sum(I.Item_Price*PT.Quantity) as TotalPrice from PackageItems AS PT INNER JOIN  Items as I ON PT.Item_ID=I.Item_ID where PT.Package_ID = '" + GettingPackageID + "' and I.UserId in (SELECT UserId FROM Users where UserName = '" + Username + "')", con);
+            // table name   
+            SqlDataAdapter da = new SqlDataAdapter(com);
+            DataSet ds = new DataSet();
+            da.Fill(ds);  // fill dataset  
+            string NoofRow = ds.Tables[0].Rows.Count.ToString();
+            int noOFrows = int.Parse(NoofRow);
+            if (noOFrows > 0)
+            {
+              
+                using (SqlConnection myconnection = new SqlConnection(connectionString))
+                {
+                    SqlCommand mycommand = new SqlCommand("UpdatePrice", myconnection);
+                    mycommand.CommandType = CommandType.StoredProcedure;
+                    mycommand.Parameters.Add("@Package_Price", SqlDbType.NChar).Value = ds.Tables[0].Rows[0]["TotalPrice"].ToString();                
+                    mycommand.Parameters.Add("@Package_ID", SqlDbType.Int).Value = GettingPackageID;
+                    myconnection.Open();
+                    mycommand.ExecuteNonQuery();
+                    myconnection.Close();
+                }
+            }
+            con.Close();
         }
         protected void Cancel(object sender, EventArgs e)
         {
@@ -115,6 +150,7 @@ namespace Project_CuisineDelight.CatererFolder
                 // to retrive specific  textfield name   
                 DropItem.DataSource = ds.Tables[0];      //assigning datasource to the dropdownlist  
                 DropItem.DataBind();  //binding dropdownlist 
+                con.Close();
             }
         }
 
@@ -135,12 +171,13 @@ namespace Project_CuisineDelight.CatererFolder
                     string Username = Session["UserName"].ToString();
                     SqlConnection con = new SqlConnection(connectionString);
                     con.Open();
-                    SqlCommand com = new SqlCommand("Select PT.Item_Name, PT.Quantity from PackageItems AS PT INNER JOIN  Items as I ON PT.Item_ID=I.Item_ID where PT.Package_ID = '"+GettingPackageID+"' and PT.Item_ID = '"+ GettingItemId + "' and I.UserId in (SELECT UserId FROM Users where UserName = '" + Username + "')", con);
+                    SqlCommand com = new SqlCommand("Select PT.Item_Name, PT.Quantity from PackageItems AS PT INNER JOIN  Items as I ON PT.Item_ID=I.Item_ID where PT.Package_ID = '" + GettingPackageID+"' and PT.Item_ID = '"+ GettingItemId + "' and I.UserId in (SELECT UserId FROM Users where UserName = '" + Username + "')", con);
                     // table name   
                     SqlDataAdapter da = new SqlDataAdapter(com);
                     DataSet ds = new DataSet();
                     da.Fill(ds);  // fill dataset  
                     string NoofRow = ds.Tables[0].Rows.Count.ToString();
+                    
                     int noOFrows=int.Parse(NoofRow);
                     if (noOFrows > 0)
                     {
@@ -176,9 +213,11 @@ namespace Project_CuisineDelight.CatererFolder
                         }
                     }
                     con.Close();
-                   
-                }
+                    //updating the price of the package
 
+
+                }
+                UpdatePrice();
                 LoadGrid();
             }
 

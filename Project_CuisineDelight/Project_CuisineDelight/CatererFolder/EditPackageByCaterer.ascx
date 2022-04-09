@@ -33,22 +33,18 @@
                           </td>
                     <td><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Enter the price of the item"  ControlToValidate="PackageDiscount"></asp:RequiredFieldValidator></td>                
                 </tr>
-                <tr >
-                            <td  align="right"><asp:Label ID="Label1" runat="server" Text=""> </asp:Label>Add Item: </td>
-                            <td colspan="2">                            
-                             <asp:DropDownList ID="DropDownListItem" runat="server">
-                             </asp:DropDownList>
-
-                            <asp:TextBox ID="ItemQuantity" runat="server" Width="150px" TextMode="Number" Text="0"></asp:TextBox>
-                            <asp:Button ID="AddItem" runat="server" Text="Add Item" onclick="AddItemsToPackageBtn"/>
-                            </td>
-                            <td>                      
-                               <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please select the quantity" ControlToValidate="ItemQuantity"></asp:RequiredFieldValidator></td>                          
+                 <tr>
+                     <td  align="right"><asp:Label ID="TotalPackagePrice" runat="server" Text=""> </asp:Label>Price: </td>
+                    <td >
+                     <asp:TextBox ID="PackagePrice"  runat="server" Width="400px" Text='<%# Eval("Package_Price") %>' Enabled="false"></asp:TextBox>
+                    </td>
+                   
                 </tr>
+              
                 <tr >
-                <td></td>
+                <td  align="right"><asp:Label ID="Label2" runat="server" Text=""> </asp:Label>Items: </td>
                 <td>
-                                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Package_items_ID" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
+                <asp:GridView ID="GridView1" runat="server" Width="400px" AutoGenerateColumns="False" DataKeyNames="Package_items_ID" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display.">
                 <Columns>
                     <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
                     <asp:BoundField DataField="Package_items_ID" HeaderText="Package_items_ID" ReadOnly="True" SortExpression="Package_items_ID" InsertVisible="False" Visible="False" />
@@ -74,6 +70,19 @@
                </td>
                         
                </tr>
+                  <tr >
+                            <td  align="right"><asp:Label ID="Label1" runat="server" Text=""> </asp:Label>Add Item: </td>
+                            <td colspan="2">                            
+                             <asp:DropDownList ID="DropDownListItem" runat="server">
+                             </asp:DropDownList>
+
+                            <asp:TextBox ID="ItemQuantity" runat="server" Width="150px" TextMode="Number" Text="0"></asp:TextBox>
+                            <asp:Button ID="AddItem" runat="server" Text="Add Item" onclick="AddItemsToPackageBtn"/>
+                            </td>
+                            <td>                      
+                               <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please select the quantity" ControlToValidate="ItemQuantity"></asp:RequiredFieldValidator></td>                          
+                </tr>
+               
                <tr>
                   <td></td>
                     <td align="center" >

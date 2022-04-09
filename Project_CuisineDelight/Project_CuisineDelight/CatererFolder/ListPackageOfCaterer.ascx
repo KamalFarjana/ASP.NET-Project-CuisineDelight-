@@ -9,15 +9,14 @@
                    <asp:Image ID="Image1" runat="server" ImageUrl='<%# "PackageImage/"+Eval("Package_Image") %>' Width="300" Height="300" style="padding:0.4em" /> </td>
                 
             </tr>
-            <tr  align="center">
-                <td>Name:<asp:Label ID="Label1" runat="server" Text='<%# Eval("Package_Name") %>'></asp:Label> </td>
+            <tr align="center" >
+                <td >Name:<asp:Label ID="Label1" runat="server" Text='<%# Eval("Package_Name") %>'></asp:Label> </td>
                 
             </tr>
      
          
              <tr  align="center">
-                <td>Discount: <asp:Label ID="Label2" runat="server" Text='<%# Eval("Package_Discount") %>'></asp:Label></td>
-                
+                <td>Price: <asp:Label ID="Label2" runat="server" Text='<%# Eval("Package_Price") %>'></asp:Label></td>               
             </tr>
             <tr  align="center">
                 <td>
