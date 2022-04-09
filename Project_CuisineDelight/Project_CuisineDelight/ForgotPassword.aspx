@@ -12,7 +12,7 @@
                              <asp:PasswordRecovery ID="PasswordRecovery1" runat="server" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderPadding="4" BorderStyle="Solid" BorderWidth="1px" Font-Names="Arial Rounded MT Bold" Font-Size="Large" Height="200px" Width="600px">
                                  <SubmitButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Arial Rounded MT Bold" Font-Size="Large" ForeColor="#284E98" />
                                  <InstructionTextStyle Font-Italic="True" Font-Names="Arial Rounded MT Bold" Font-Size="Large" ForeColor="#333333" />
-                                 <MailDefinition Subject="Your New Password for CuisineDelight.com"></MailDefinition>
+                                 <MailDefinition Subject="Forgetton Password" Priority="High"></MailDefinition>
                                  <SuccessTextStyle Font-Bold="True" ForeColor="#507CD1" />
                                  <TextBoxStyle Font-Size="0.8em" />
                                  <TitleTextStyle BackColor="#507CD1" Font-Bold="True" Font-Size="Large" ForeColor="White" />

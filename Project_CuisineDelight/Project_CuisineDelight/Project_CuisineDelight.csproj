@@ -121,10 +121,15 @@
     <Content Include="CatererFolder\CatererAddingItem.aspx" />
     <Content Include="CatererFolder\CatererMenu.aspx" />
     <Content Include="CatererFolder\Delete.aspx" />
+    <Content Include="CatererFolder\DeletePackage.aspx" />
     <Content Include="CatererFolder\EditListedItem.ascx" />
     <Content Include="CatererFolder\EditListedItem.aspx" />
+    <Content Include="CatererFolder\EditPackageByCaterer.ascx" />
+    <Content Include="CatererFolder\EditPackageByCaterer.aspx" />
     <Content Include="CatererFolder\ItemImage\default-placeholder.png" />
     <Content Include="CatererFolder\ListItemOfCaterer.ascx" />
+    <Content Include="CatererFolder\ListPackageOfCaterer.ascx" />
+    <Content Include="CatererFolder\WebForm1.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -152,6 +157,7 @@
     <Content Include="Profile Pictures\istockphoto-1293539824-170667a.jpg" />
     <Content Include="SignupCaterer.aspx" />
     <Content Include="SignupSelectionAsCustomerORCaterer.aspx" />
+    <Content Include="UserForgotPassword.aspx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -240,6 +246,13 @@
     <Compile Include="CatererFolder\Delete.aspx.designer.cs">
       <DependentUpon>Delete.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CatererFolder\DeletePackage.aspx.cs">
+      <DependentUpon>DeletePackage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\DeletePackage.aspx.designer.cs">
+      <DependentUpon>DeletePackage.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CatererFolder\EditListedItem.ascx.cs">
       <DependentUpon>EditListedItem.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -254,12 +267,40 @@
     <Compile Include="CatererFolder\EditListedItem.aspx.designer.cs">
       <DependentUpon>EditListedItem.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CatererFolder\EditPackageByCaterer.ascx.cs">
+      <DependentUpon>EditPackageByCaterer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\EditPackageByCaterer.ascx.designer.cs">
+      <DependentUpon>EditPackageByCaterer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\EditPackageByCaterer.aspx.cs">
+      <DependentUpon>EditPackageByCaterer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\EditPackageByCaterer.aspx.designer.cs">
+      <DependentUpon>EditPackageByCaterer.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CatererFolder\ListItemOfCaterer.ascx.cs">
       <DependentUpon>ListItemOfCaterer.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CatererFolder\ListItemOfCaterer.ascx.designer.cs">
       <DependentUpon>ListItemOfCaterer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\ListPackageOfCaterer.ascx.cs">
+      <DependentUpon>ListPackageOfCaterer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\ListPackageOfCaterer.ascx.designer.cs">
+      <DependentUpon>ListPackageOfCaterer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\WebForm1.aspx.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\WebForm1.aspx.designer.cs">
+      <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -370,6 +411,13 @@
     </Compile>
     <Compile Include="Customer\UserProfile.aspx.designer.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserForgotPassword.aspx.cs">
+      <DependentUpon>UserForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserForgotPassword.aspx.designer.cs">
+      <DependentUpon>UserForgotPassword.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

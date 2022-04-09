@@ -1,4 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/FrontEnd.Master" AutoEventWireup="true" CodeBehind="AddingPackage.aspx.cs" Inherits="Project_CuisineDelight.CatererFolder.AddingPackage" %>
+
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -30,19 +32,21 @@
                         </tr>
                         <tr >
                             <td align="right" ><asp:Label ID="Name" runat="server" Text=""></asp:Label>Name: </td>
-                            <td ><asp:TextBox ID="PackageName" runat="server" Width="400px"></asp:TextBox></td>
+                            <td ><asp:TextBox ID="PackageName" runat="server" Width="440px"></asp:TextBox></td>
                             <td > <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter a name of the Package" ControlToValidate="PackageName"></asp:RequiredFieldValidator></td>                
                         </tr>               
                         <tr >
                             <td  align="right"><asp:Label ID="Desciption" runat="server" Text=""> </asp:Label>Description: </td>
-                            <td><asp:TextBox ID="PackageDesciption" runat="server" Width="400px"></asp:TextBox></td>
+                            <td><asp:TextBox ID="PackageDesciption" runat="server" Width="440px"></asp:TextBox></td>
                             <td></td>
                         </tr>
+                        
                         <tr>
                             <td  align="right"><asp:Label ID="Price" runat="server" Text=""></asp:Label>Discount: </td>
-                            <td><asp:TextBox ID="PackageDiscount" runat="server" Width="400px" TextMode="Number"></asp:TextBox></td>
+                            <td><asp:TextBox ID="PackageDiscount" runat="server" Width="440px" TextMode="Number"></asp:TextBox></td>
                             <td></td>
                         </tr>
+                        
                         <tr >
                             <td></td>
                             <td>
