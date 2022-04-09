@@ -42,8 +42,8 @@
                         </tr>
                         
                         <tr>
-                            <td  align="right"><asp:Label ID="Price" runat="server" Text=""></asp:Label>Discount: </td>
-                            <td><asp:TextBox ID="PackageDiscount" runat="server" Width="440px" TextMode="Number"></asp:TextBox></td>
+                            <td  align="right"><asp:Label ID="Price" runat="server" ></asp:Label>Discount: </td>
+                            <td><asp:TextBox ID="PackageDiscount" runat="server" Width="440px" TextMode="Number" Text="1"></asp:TextBox></td>
                             <td></td>
                         </tr>
                         
