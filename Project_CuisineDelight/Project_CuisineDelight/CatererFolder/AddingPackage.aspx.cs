@@ -17,6 +17,7 @@ namespace Project_CuisineDelight.CatererFolder
         public string connectionString = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
         protected void Page_Load(object sender, EventArgs e)
         {
+           
 
         }
         protected void AddPackageBtn_Click(object sender, EventArgs e)
@@ -42,7 +43,7 @@ namespace Project_CuisineDelight.CatererFolder
                     mycommand.CommandType = CommandType.StoredProcedure;
                     mycommand.Parameters.Add("@Package_Name", SqlDbType.VarChar).Value = PackageName.Text;
                     mycommand.Parameters.Add("@Package_Desc ", SqlDbType.VarChar).Value = PackageDesciption.Text;
-                    mycommand.Parameters.Add("@Package_Discount", SqlDbType.Int).Value = int.TryParse(PackageDiscount.Text,out x);
+                    mycommand.Parameters.Add("@Package_Discount", SqlDbType.Int).Value = int.TryParse(PackageDiscount.Text, out x);
                     mycommand.Parameters.Add("@userId", SqlDbType.UniqueIdentifier).Value = newuserid;
                     mycommand.Parameters.Add("@Package_Image", SqlDbType.VarChar).Value = (uploadedFile.FileName).ToString();
                     myconnection.Open();
@@ -62,5 +63,10 @@ namespace Project_CuisineDelight.CatererFolder
             }
 
         }
+        protected void AddItemToPackageBtn_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
+       
 }

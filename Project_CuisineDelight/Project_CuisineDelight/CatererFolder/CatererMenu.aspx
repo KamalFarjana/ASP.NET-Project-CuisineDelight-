@@ -1,6 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/FrontEnd.Master" AutoEventWireup="true" CodeBehind="CatererMenu.aspx.cs" Inherits="Project_CuisineDelight.CatererFolder.CatererMenu" %>
 
 <%@ Register Src="~/CatererFolder/ListItemOfCaterer.ascx" TagPrefix="uc1" TagName="ListItemOfCaterer" %>
+<%@ Register Src="~/CatererFolder/ListPackageOfCaterer.ascx" TagPrefix="uc1" TagName="ListPackageOfCaterer" %>
+
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -31,7 +33,7 @@
                  <div class="row">
                     <div class="col">
                          <asp:Button ID="Button3" runat="server" Text="Add Package"  PostBackUrl="~/CatererFolder/AddingPackage.aspx"/>
-                        
+                         <uc1:ListPackageOfCaterer runat="server" id="ListPackageOfCaterer" />
                          
                     </div>
                     
