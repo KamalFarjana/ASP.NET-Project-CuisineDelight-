@@ -27,6 +27,37 @@
                   
                     <td></td>
                 </tr>
+                <tr >
+                    <td  align="right"><asp:Label ID="Item_Type" runat="server" Text=""> </asp:Label>Item Type: </td>   
+                        <td colspan="2"><asp:TextBox ID="ItemType" runat="server" Width="200px"  Enabled="false" Text='<%# Eval("Item_Type") %>'></asp:TextBox>
+                  
+                    <asp:DropDownList ID="ItemDropDownList" runat="server">
+                            <asp:ListItem Text="Change Type" Value="0" />
+                            <asp:ListItem Text="Halal" Value="1" />
+                            <asp:ListItem Text="Fast Food" Value="2" />
+                            <asp:ListItem Text="Bangladeshi" Value="3" />
+                            <asp:ListItem Text="Indian" Value="4" />
+                            <asp:ListItem Text="Asian" Value="5" />
+                            <asp:ListItem Text="Pizza" Value="6" />
+                            <asp:ListItem Text="Burger" Value="7" />
+                            <asp:ListItem Text="Juice" Value="8" />
+                            <asp:ListItem Text="Breakfast & brunch" Value="9" />
+                            <asp:ListItem Text="South Indian" Value="10" />
+                            <asp:ListItem Text="Indian Curry" Value="11" />
+                            <asp:ListItem Text="Salad" Value="12" />
+                            <asp:ListItem Text="Dessert" Value="13" />
+                            <asp:ListItem Text="Vegeterian" Value="14" />
+                            <asp:ListItem Text="Vegan" Value="15" />
+                            <asp:ListItem Text="Bakery" Value="16" />
+                            <asp:ListItem Text="Japanese" Value="17" />
+                         <asp:ListItem Text="Pakistani" Value="18" />
+                         <asp:ListItem Text="Biriyani" Value="19" />
+                         <asp:ListItem Text="Rice" Value="20" />
+                        <asp:ListItem Text="Starter" Value="21" />
+                             <asp:ListItem Text="Others" Value="22" />
+                        </asp:DropDownList> </td>
+                    <td></td>
+                </tr>
                 <tr>
                     <td  align="right"><asp:Label ID="Price" runat="server" Text=""></asp:Label>Price: </td>
                     <td><asp:TextBox ID="ItemPrice" runat="server" Width="400px" TextMode="Number" Text='<%# Eval("Item_Price") %>'></asp:TextBox>
