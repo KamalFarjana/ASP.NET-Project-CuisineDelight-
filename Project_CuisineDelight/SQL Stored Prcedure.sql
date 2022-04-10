@@ -124,3 +124,11 @@ AS
 
 Update Packages  set Package_Price= @Package_Price where Package_ID = @Package_ID
 RETURN 0
+
+----------------------------------------------
+CREATE PROCEDURE [dbo].[ApproveCaterer]
+	@UserID  UNIQUEIDENTIFIER
+AS
+	UPDATE Memberships SET IsApproved=1 WHERE UserId=@UserID
+RETURN
+--------------------------------------

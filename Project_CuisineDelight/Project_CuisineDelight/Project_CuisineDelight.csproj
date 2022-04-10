@@ -133,6 +133,7 @@
     <Content Include="CatererFolder\ItemImage\default-placeholder.png" />
     <Content Include="CatererFolder\ListItemOfCaterer.ascx" />
     <Content Include="CatererFolder\ListPackageOfCaterer.ascx" />
+    <Content Include="CatererFolder\Orders.aspx" />
     <Content Include="CatererFolder\WebForm1.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -327,6 +328,13 @@
     </Compile>
     <Compile Include="CatererFolder\ListPackageOfCaterer.ascx.designer.cs">
       <DependentUpon>ListPackageOfCaterer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\Orders.aspx.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\Orders.aspx.designer.cs">
+      <DependentUpon>Orders.aspx</DependentUpon>
     </Compile>
     <Compile Include="CatererFolder\WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
