@@ -6,8 +6,10 @@
 		<siteMapNode url="~/About" title="About"  description="About" />
 		
 		<siteMapNode url="~/SearchResults" title="Search Results"  description="Search Results" >
-		  <siteMapNode url="~/SearchCatererView" title="Caterer"  description="Caterer"/>
-			
+		  <siteMapNode url="~/SearchCatererView" title="Caterer"  description="Caterer">
+			<siteMapNode url="~/UserViewPackages" title="ViewPackages"  description="ViewPackages"/>
+
+		</siteMapNode>
 	    </siteMapNode>
 		
 		<siteMapNode url="/CatererFolder/CatererMenu" title="Caterer Menu"  description="Caterer Menu">
