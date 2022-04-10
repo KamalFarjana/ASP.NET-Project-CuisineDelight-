@@ -33,7 +33,18 @@
                     <asp:Parameter Name="Package_items_ID" Type="Int32" />
                 </UpdateParameters>
             </asp:SqlDataSource>
-
+            <asp:DataList ID="DataList1" runat="server">
+                <ItemTemplate>
+                    <table style="width:100%;">
+                        <tr>
+                            <td><input id="Text1" type="text" /></td>
+                            <td><asp:Button ID="Button1" runat="server" Text="Button" /></td>
+                  
+                        </tr>
+                        
+                    </table>
+                </ItemTemplate>
+            </asp:DataList>
         </div>
     </form>
  

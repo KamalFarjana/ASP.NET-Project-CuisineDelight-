@@ -13,7 +13,11 @@
 </head>
 <body style="font-size: large;" font-family: 'Arial Rounded MT Bold';">
      <main >
-          <nav class="navbar navbar-inverse navbar-fixed-top" style="font-size:large">
+       
+        <form id="form1" runat="server" style="margin-top:2.9em; margin-bottom:6em">
+
+
+           <nav class="navbar navbar-inverse navbar-fixed-top" style="font-size:large">
            <div class="container-fluid">  
                     <div class="navbar-header">  
                        <a class="navbar-brand" runat="server" href="~/Default.aspx"><span style="color:#a852c6; font-size:xx-large">Cuisine</span><span style="color:#33cee1; font-size:xx-large">Delight</span></a>
@@ -41,14 +45,23 @@
                         </asp:LoginView>
                                         
                     </ul> 
-                    <form class="navbar-form navbar-right">
-                        <input  type="search" placeholder="Search your food" aria-label="Search">
-                        <button type="submit">Search</button>
-                    </form>
+
+               <div class="navbar-form navbar-right">
+                        <asp:TextBox ID="SearchingFood" runat="server" placeholder="Search your food"></asp:TextBox>
+                        
+                         <asp:Button ID="Button1" runat="server" Text="Button" OnClick="btnSearch_Click" />
+                </div>
+              
+                 
+              
+                       
+                       
+                 
                              
              </div>  
          </nav> 
-        <form id="form1" runat="server" style="margin-top:2.9em; margin-bottom:6em">
+
+
             <div>             
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>

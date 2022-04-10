@@ -4,14 +4,22 @@
 		<siteMapNode url="~/FAQ" title="FAQ"  description="FAQ"/>
 		<siteMapNode url="~/Contact" title="Contact Us"  description="Contact Us"/>
 		<siteMapNode url="~/About" title="About"  description="About" />
+		
+		<siteMapNode url="~/SearchResults" title="Search Results"  description="Search Results" >
+		  <siteMapNode url="~/SearchCatererView" title="Caterer"  description="Caterer"/>
+			
+	    </siteMapNode>
+		
 		<siteMapNode url="/CatererFolder/CatererMenu" title="Caterer Menu"  description="Caterer Menu">
 			<siteMapNode url="~/CatererFolder/CatererAddingItem" title="Add Item"  description="Add Item"/>
 			<siteMapNode url="~/CatererFolder/EditListedItem" title="Edit Item"  description="Edit Item"/>
 			<siteMapNode url="~/CatererFolder/AddingPackage" title="Add Package"  description="Add Package"/>
 			<siteMapNode url="~/CatererFolder/EditPackageByCaterer" title="Edit Package"  description="Edit Package"/>
 		</siteMapNode>
+		
 		<siteMapNode url="~/Caterer" title="Caterer List"  description="Caterer List">    </siteMapNode>
 		<siteMapNode url="~/Food" title="Food"  description="Food">    </siteMapNode>
+		
 		<siteMapNode url="~/Login" title="Login"  description="Login">
 			<siteMapNode url="~/ForgotPassword" title="Forgot Password"  description="Forgot Password"/>
 		</siteMapNode>

@@ -11,25 +11,16 @@ namespace Project_CuisineDelight
 {
 
 
-    public partial class SearchResults
+    public partial class SearchCatererPackageShow
     {
 
         /// <summary>
-        /// SiteMapPath1 control.
+        /// SearchCaterePackages control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath1;
-
-        /// <summary>
-        /// SearchControl control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Project_CuisineDelight.SearchControl SearchControl;
+        protected global::System.Web.UI.WebControls.DataList SearchCaterePackages;
     }
 }
