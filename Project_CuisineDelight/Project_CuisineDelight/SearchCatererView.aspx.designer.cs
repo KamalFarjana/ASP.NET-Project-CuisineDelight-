@@ -7,47 +7,47 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project_CuisineDelight.CatererFolder
+namespace Project_CuisineDelight
 {
 
 
-    public partial class WebForm1
+    public partial class SearchCatererView
     {
 
         /// <summary>
-        /// form1 control.
+        /// SiteMapPath1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath1;
 
         /// <summary>
-        /// GridView1 control.
+        /// CatererName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.Label CatererName;
 
         /// <summary>
-        /// SqlDataSource1 control.
+        /// SearchCatererItemShow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
+        protected global::Project_CuisineDelight.SearchCatererItemShow SearchCatererItemShow;
 
         /// <summary>
-        /// DataList1 control.
+        /// SearchCatererPackageShow control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DataList DataList1;
+        protected global::Project_CuisineDelight.SearchCatererPackageShow SearchCatererPackageShow;
     }
 }

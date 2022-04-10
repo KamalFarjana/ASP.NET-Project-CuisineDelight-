@@ -155,10 +155,17 @@
     <Content Include="Login.aspx" />
     <Content Include="Master\FrontEnd.Master" />
     <Content Include="Profile Pictures\istockphoto-1293539824-170667a.jpg" />
+    <Content Include="SearchCatererItemShow.ascx" />
+    <Content Include="SearchCatererPackageShow.ascx" />
+    <Content Include="SearchCatererView.aspx" />
+    <Content Include="SearchControl.ascx" />
     <Content Include="SearchResults.aspx" />
     <Content Include="SignupCaterer.aspx" />
     <Content Include="SignupSelectionAsCustomerORCaterer.aspx" />
     <Content Include="UserForgotPassword.aspx" />
+    <Content Include="UserViewingPackages.ascx" />
+    <Content Include="UserViewPackages.aspx" />
+    <Content Include="UserViewPackagesItems.ascx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -364,6 +371,34 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SearchCatererItemShow.ascx.cs">
+      <DependentUpon>SearchCatererItemShow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchCatererItemShow.ascx.designer.cs">
+      <DependentUpon>SearchCatererItemShow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCatererPackageShow.ascx.cs">
+      <DependentUpon>SearchCatererPackageShow.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchCatererPackageShow.ascx.designer.cs">
+      <DependentUpon>SearchCatererPackageShow.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchCatererView.aspx.cs">
+      <DependentUpon>SearchCatererView.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchCatererView.aspx.designer.cs">
+      <DependentUpon>SearchCatererView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchControl.ascx.cs">
+      <DependentUpon>SearchControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchControl.ascx.designer.cs">
+      <DependentUpon>SearchControl.ascx</DependentUpon>
+    </Compile>
     <Compile Include="SearchResults.aspx.cs">
       <DependentUpon>SearchResults.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -426,6 +461,27 @@
     </Compile>
     <Compile Include="UserForgotPassword.aspx.designer.cs">
       <DependentUpon>UserForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserViewingPackages.ascx.cs">
+      <DependentUpon>UserViewingPackages.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserViewingPackages.ascx.designer.cs">
+      <DependentUpon>UserViewingPackages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserViewPackages.aspx.cs">
+      <DependentUpon>UserViewPackages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserViewPackages.aspx.designer.cs">
+      <DependentUpon>UserViewPackages.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserViewPackagesItems.ascx.cs">
+      <DependentUpon>UserViewPackagesItems.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserViewPackagesItems.ascx.designer.cs">
+      <DependentUpon>UserViewPackagesItems.ascx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
