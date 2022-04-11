@@ -120,6 +120,8 @@
     <Content Include="Admin\ManageCaterer.aspx" />
     <Content Include="Admin\Report.aspx" />
     <Content Include="App_Data\SignupConfirmation.txt" />
+    <Content Include="App_Themes\Black\Black.css" />
+    <Content Include="App_Themes\Pink\Pink.css" />
     <Content Include="Caterer.aspx" />
     <Content Include="CatererFolder\AddingPackage.aspx" />
     <Content Include="CatererFolder\CatererAddingItem.aspx" />
