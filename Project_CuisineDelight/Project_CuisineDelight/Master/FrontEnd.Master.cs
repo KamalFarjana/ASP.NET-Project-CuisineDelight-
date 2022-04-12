@@ -40,7 +40,9 @@ namespace Project_CuisineDelight
                     LinkButton16.Visible = false;   //caterer homepage
                     LinkButton10.Visible = false;   //menu
                     LinkButton14.Visible = false;    //orders
-                    LinkButton15.Visible = true;    //orders
+                    LinkButton15.Visible = true;    //shopping cart
+                    LinkButton18.Visible = true;    //customer profile
+
 
                     LinkButton1.Visible = false;    //admin login
                     LinkButton2.Visible = false;    //admin dashboard
