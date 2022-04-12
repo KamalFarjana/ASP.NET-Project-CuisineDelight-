@@ -33,7 +33,7 @@
                     <SortedDescendingCellStyle BackColor="#F1E5CE" />
                     <SortedDescendingHeaderStyle BackColor="#93451F" />
                 </asp:GridView>
-                <asp:SqlDataSource ID="chart1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="select month(Orders.Order_Fulfilled_Date) as Month,sum(Order_Packages.[Total Amount]) as Total_Sale from Orders inner join Order_Packages on Orders.OrderID = Order_Packages.OrderID group by month(Order_Fulfilled_Date) order by month(Order_Fulfilled_Date)"></asp:SqlDataSource>
+                <asp:SqlDataSource ID="chart1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="select month(Orders.Order_Fulfilled_Date) as Month,sum(Order_Packages.[TotalAmount]) as Total_Sale from Orders inner join Order_Packages on Orders.OrderID = Order_Packages.OrderID group by month(Order_Fulfilled_Date) order by month(Order_Fulfilled_Date)"></asp:SqlDataSource>
             </div>
             <div class="col-md-5" style="margin-right:10px;">
                 <asp:Chart ID="Chart3" runat="server" DataSourceID="chart1">

@@ -32,7 +32,7 @@
                 <br />
                 <asp:Button ID="Button1" runat="server" Text="Approve account" OnClick="Button1_Click" />
                 <asp:Button ID="Button2" runat="server" Text="Disable account" OnClick="Button2_Click" />
-                <asp:Button ID="Button3" runat="server" Text="Delete account" OnClick="Button3_Click" />
+                <%--<asp:Button ID="Button3" runat="server" Text="Delete account" OnClick="Button3_Click" />--%>
             </div>
             
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [UserId], [Email], [IsApproved], [CreateDate] FROM [Memberships] ORDER BY [CreateDate] DESC"></asp:SqlDataSource>

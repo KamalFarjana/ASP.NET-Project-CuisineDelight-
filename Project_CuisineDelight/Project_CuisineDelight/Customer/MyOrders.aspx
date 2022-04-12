@@ -29,7 +29,7 @@
                         <SortedDescendingCellStyle BackColor="#F1E5CE" />
                         <SortedDescendingHeaderStyle BackColor="#93451F" />
                     </asp:GridView>
-                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT dbo.Orders.OrderID, dbo.Orders.Order_Fulfilled_Date, dbo.Order_Packages.[Total Amount], dbo.Orders.Order_Status FROM dbo.Orders INNER JOIN dbo.Order_Packages ON dbo.Orders.OrderID = dbo.Order_Packages.OrderID WHERE  dbo.Orders.UserId = (SELECT UserId FROM [Users] WHERE ([UserName] = @UserName))">
+                    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT dbo.Orders.OrderID, dbo.Orders.Order_Fulfilled_Date, dbo.Order_Packages.[TotalAmount], dbo.Orders.Order_Status FROM dbo.Orders INNER JOIN dbo.Order_Packages ON dbo.Orders.OrderID = dbo.Order_Packages.OrderID WHERE  dbo.Orders.UserId = (SELECT UserId FROM [Users] WHERE ([UserName] = @UserName))">
                         <SelectParameters>
                             <asp:SessionParameter Name="UserName" SessionField="UserName" Type="Object" />
                         </SelectParameters>
