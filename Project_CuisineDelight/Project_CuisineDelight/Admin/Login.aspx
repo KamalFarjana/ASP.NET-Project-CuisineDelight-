@@ -6,8 +6,11 @@
          <h1>Admin Login</h1><hr />
          <div class="row">
 
-             <asp:Login ID="Login1" runat="server" BackColor="#F7F7DE" BorderColor="#CCCC99" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="10pt" OnAuthenticate="Login1_Authenticate" DestinationPageUrl="~/Admin/Dashboard.aspx" Width="396px">
-                 <TitleTextStyle BackColor="#6B696B" Font-Bold="True" ForeColor="#FFFFFF" />
+             <asp:Login ID="Login1" runat="server" BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" OnAuthenticate="Login1_Authenticate" DestinationPageUrl="~/Admin/Dashboard.aspx" Width="396px" BorderPadding="4" ForeColor="#333333">
+                 <InstructionTextStyle Font-Italic="True" ForeColor="Black" />
+                 <LoginButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Verdana" Font-Size="0.8em" ForeColor="#284E98" />
+                 <TextBoxStyle Font-Size="0.8em" />
+                 <TitleTextStyle BackColor="#507CD1" Font-Bold="True" ForeColor="#FFFFFF" Font-Size="0.9em" />
              </asp:Login>
          </div>
      </div>
