@@ -6,12 +6,8 @@
      <ItemTemplate>
       <div class="row">
         <div class="col-xs-12 col-sm-6 col-md-4">
-            <div>
-                   <asp:Image ID="PackageImageDB" runat="server" ImageUrl='<%# "CatererFolder/PackageImage/"+Eval("Package_Image") %>' Width="300" Height="300"  />   
-            </div>
-      
-           
-           
+          <asp:Image ID="PackageImageDB" runat="server" ImageUrl='<%# "CatererFolder/PackageImage/"+Eval("Package_Image") %>' Width="300" Height="300"  />       
+           <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "ShoppingCart.aspx?IDCAT="+Eval("Package_ID") %>' Text='Add to Cart'></asp:HyperLink>
                   
         </div>
          <div class="col-xs-12 col-sm-6 col-md-1">
@@ -50,13 +46,6 @@
                         <uc1:UserViewPackagesItems runat="server" ID="UserViewPackagesItems" />
                     </td>
                    
-                   
-                </tr>
-                <tr>
-                    <td></td>
-                     <td>
-                             <div> <asp:Button ID="btnAddToCart" runat="server" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" Text="Add to Cart" OnClick="btnAddToCart_Click" BackColor="#996633" ForeColor="White" /></div>
-                    </td>
                 </tr>
                
             </table>

@@ -1,8 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/FrontEnd.Master" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="Project_CuisineDelight.UserProfile" %>
 
 <%@ Register Src="~/Customer/UserProfileForm.ascx" TagPrefix="uc1" TagName="UserProfileForm" %>
-<%@ Register Src="~/Customer/UserProfileImage.ascx" TagPrefix="uc1" TagName="UserProfileImage" %>
-
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -12,7 +10,7 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-4" style="padding:2em;min-height:650px;background-color: #336699; background-image: none;" >
-                               <div class="card">
+                                <div class="card">
                                   <div class="card-body">
                                       <div class="row" >
                                          <div class="col">
@@ -25,26 +23,28 @@
                                      </div>
                                      <div class="row">
                                          <div class="col">
-                                             <%--<div class="text-center">
+                                             <div class="text-center">
                                                  <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl="https://cdn-icons-png.flaticon.com/512/149/149071.png" Width="200px" />
-                                             </div>--%>
-                                              <div class="text-center" style="margin-left:23%">
-                                                  <uc1:UserProfileImage runat="server" ID="UserProfileImage" />
-                                              </div>
+                                             </div>
                                          </div>
                                      </div>
                                      <div class="row">
                                          <div class="col" style="color: #FFFFFF">
                                              <center>
                                                           <asp:FileUpload ID="FileUpload1" runat="server"/>
-                                             </center>                                            
+                                             </center>
+                                                
+                                        
+                                            
                                          </div>
                                      </div>
                                       <br />
                                      <div class="row">
                                          <div class="col">
-                                             <div class="text-center">                                                
-                                                 <asp:Button runat="server" Text="Change Picture" CssClass="btn btn-primary" OnClick="ChanegPicture_Click" />                                           
+                                             <div class="text-center">
+                                                
+                                                 <asp:Button runat="server" Text="Change Picture" CssClass="btn btn-primary" />
+                                            
                                              </div>
                                          </div>
                                      </div>
@@ -54,7 +54,6 @@
                                    
                                   </div>
                                 </div>
-                            
                         </div>
                         <div class="col-md-1">
 
