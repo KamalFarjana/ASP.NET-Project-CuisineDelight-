@@ -40,7 +40,7 @@
                                  <li><a runat="server" href="~/LoginSelectionAsCatereorCustomer.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                             </AnonymousTemplate>
                             <LoggedInTemplate>
-                                <li> <asp:LinkButton ID="LinkButton11" class="navbar-link footerlinks" runat="server" OnClick="LinkButton11_Click" Visible="False"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</asp:LinkButton></li>
+                                <li> <%--<asp:LinkButton ID="LinkButton11" class="navbar-link footerlinks" runat="server" OnClick="LinkButton11_Click" Visible="False"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</asp:LinkButton>--%></li>
                                 <li> <asp:LinkButton ID="LinkButton12" class="navbar-link footerlinks" runat="server" OnClick="LinkButton12_Click"><span class="glyphicon glyphicon-user"></span><asp:LoginName ID="LoginName1" runat="server" FormatString=" {0}" /></asp:LinkButton></li>       
                                   <li><a id="AnchorButton" onserverclick="Logout" runat="server">Logout</a></li> 
                                                         
