@@ -16,19 +16,14 @@
                 <td>Price: <asp:Label ID="Label3" runat="server" Text='<%# "$ "+ Eval("Item_Price") %>'></asp:Label></td>
                 
             </tr>
-           
             <tr  align="center">
-                 <asp:LoginView ID="LoginView1" runat="server">
-                <LoggedInTemplate>
-                    <td>
-                      <asp:Button ID="btnAddToCart" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" runat="server" Text="Add to Cart" CommandArgument='<%# Eval("Item_ID") %>' OnClick="btnAddToCart_Click" />
-                    
-                    
+                <td>
+                    <asp:Label ID="Label2" runat="server" Text="Quantity"></asp:Label>
+                    <asp:TextBox ID="ItemQuantity" runat="server" Width="70px" TextMode="Number" Text="0"></asp:TextBox>
+                    <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "ShoppingCart.aspx?IDCAT="+Eval("Item_ID") %>' Text='Add to Cart'></asp:HyperLink>
+                    &nbsp&nbsp
                    
                 </td>
-                </LoggedInTemplate>
-
-            </asp:LoginView>
                 
             </tr>
         </table>

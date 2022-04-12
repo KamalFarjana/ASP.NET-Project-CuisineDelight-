@@ -22,14 +22,5 @@ namespace Project_CuisineDelight
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath1;
-
-        /// <summary>
-        /// UserViewingtems control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Project_CuisineDelight.UserViewingtems UserViewingtems;
     }
 }
