@@ -162,14 +162,14 @@
                                          </asp:ChangePassword>
                                       </div> 
                                <br />
-                                       <div class="row">
+                                       <%--<div class="row">
                                          <div class="col">
                                              <div>
                                                  <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Edit My Wallet</a>
                                             
                                              </div>
                                          </div>
-                                     </div>
+                                     </div>--%>
                                  
                         </div>
                     </div>

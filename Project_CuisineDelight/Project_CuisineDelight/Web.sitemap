@@ -4,7 +4,8 @@
 		<siteMapNode url="~/FAQ" title="FAQ"  description="FAQ"/>
 		<siteMapNode url="~/Contact" title="Contact Us"  description="Contact Us"/>
 		<siteMapNode url="~/About" title="About"  description="About" />
-
+		<siteMapNode url="~/ShoppingCart" title="Shopping Cart"  description="Shopping Cart"/>
+		<siteMapNode url="~/Customer/MyOrders" title="My Orders"  description="My Orders" />
 		<siteMapNode url="~/SearchResults" title="Search Results"  description="Search Results" >
 			<siteMapNode url="~/SearchCatererView" title="Caterer"  description="Caterer">
 				<siteMapNode url="~/UserViewPackages" title="ViewPackages"  description="ViewPackages"/>

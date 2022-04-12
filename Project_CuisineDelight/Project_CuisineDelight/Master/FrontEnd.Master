@@ -92,7 +92,7 @@
                                <div class="row">
                                 <div class="col-md-5">
                                    <ul class="nav navbar-nav sc-center">
-                                       <li><a runat="server" href="~/Default.aspx"><span style="color:#a852c6">Cuisine</span><span style="color:#33cee1">Delight</span> </a></li>                                      
+                                       <li><a runat="server"><span style="color:#a852c6">Cuisine</span><span style="color:#33cee1">Delight</span> </a></li>                                      
                                        
                                        </ul>
                                 </div>
