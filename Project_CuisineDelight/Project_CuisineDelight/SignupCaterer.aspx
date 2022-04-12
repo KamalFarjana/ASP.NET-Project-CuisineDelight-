@@ -9,7 +9,7 @@
       <div class="row">
         <div class="col"> 
             <div class="text-center">
-                <asp:CreateUserWizard ID="CreateUserWizard1" runat="server"  BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="2px" Font-Names="Arial Rounded MT Bold" Font-Size="X-Large" ForeColor="#333333"  Height="200px" Width="500px" ContinueDestinationPageUrl="~/Default.aspx" DisableCreatedUser="True" OnCreatedUser="CreateUserWizard1_CreatedUser">
+                <asp:CreateUserWizard ID="CreateUserWizard1" runat="server"  BackColor="#EFF3FB" BorderColor="#B5C7DE" BorderStyle="Solid" BorderWidth="2px" Font-Names="Arial Rounded MT Bold" Font-Size="X-Large" ForeColor="#333333"  Height="200px" Width="500px" ContinueDestinationPageUrl="~/LoginSelectionAsCatereorCustomer.aspx" DisableCreatedUser="True" OnCreatedUser="CreateUserWizard1_CreatedUser">
                     <ContinueButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Arial Rounded MT Bold" ForeColor="#284E98" />
                     <CreateUserButtonStyle BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" Font-Names="Arial Rounded MT Bold" Font-Size="Large" ForeColor="#284E98"  />
                     <TitleTextStyle   BackColor="#507CD1" Font-Bold="True" Font-Size="Large" ForeColor="#993366" />

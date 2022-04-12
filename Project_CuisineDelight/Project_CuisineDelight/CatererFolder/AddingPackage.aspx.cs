@@ -38,12 +38,12 @@ namespace Project_CuisineDelight.CatererFolder
                 }
                 using (SqlConnection myconnection = new SqlConnection(connectionString))
                 {
-                    int x = 0;
+                    
                     SqlCommand mycommand = new SqlCommand("AddingPackages", myconnection);
                     mycommand.CommandType = CommandType.StoredProcedure;
                     mycommand.Parameters.Add("@Package_Name", SqlDbType.VarChar).Value = PackageName.Text;
                     mycommand.Parameters.Add("@Package_Desc ", SqlDbType.VarChar).Value = PackageDesciption.Text;
-                    mycommand.Parameters.Add("@Package_Discount", SqlDbType.Int).Value = int.TryParse(PackageDiscount.Text, out x);
+                    mycommand.Parameters.Add("@Package_Discount", SqlDbType.Int).Value = int.Parse(PackageDiscount.Text);
                     mycommand.Parameters.Add("@userId", SqlDbType.UniqueIdentifier).Value = newuserid;
                     mycommand.Parameters.Add("@Package_Image", SqlDbType.VarChar).Value = (uploadedFile.FileName).ToString();
                     myconnection.Open();
