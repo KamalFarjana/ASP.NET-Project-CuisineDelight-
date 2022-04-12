@@ -125,7 +125,12 @@
     <Content Include="Caterer.aspx" />
     <Content Include="CatererFolder\AddingPackage.aspx" />
     <Content Include="CatererFolder\CatererAddingItem.aspx" />
+    <Content Include="CatererFolder\CatererHomePage.aspx" />
+    <Content Include="CatererFolder\CatererLogoChange.ascx" />
     <Content Include="CatererFolder\CatererMenu.aspx" />
+    <Content Include="CatererFolder\CatererProfile.aspx" />
+    <Content Include="CatererFolder\CatererProfileForm.ascx" />
+    <Content Include="CatererFolder\CatererViewAllPackages.aspx" />
     <Content Include="CatererFolder\Delete.aspx" />
     <Content Include="CatererFolder\DeletePackage.aspx" />
     <Content Include="CatererFolder\EditListedItem.ascx" />
@@ -145,6 +150,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="Customer\MyOrders.aspx" />
     <Content Include="Customer\UserProfileForm.ascx" />
+    <Content Include="Customer\UserProfileImage.ascx" />
     <Content Include="Default.aspx" />
     <Content Include="FAQ.aspx" />
     <Content Include="favicon.ico" />
@@ -171,7 +177,9 @@
     <Content Include="SignupCaterer.aspx" />
     <Content Include="SignupSelectionAsCustomerORCaterer.aspx" />
     <Content Include="UserForgotPassword.aspx" />
+    <Content Include="UserViewingAllCaterer.ascx" />
     <Content Include="UserViewingPackages.ascx" />
+    <Content Include="UserViewingtems.ascx" />
     <Content Include="UserViewPackages.aspx" />
     <Content Include="UserViewPackagesItems.ascx" />
     <Content Include="WebForm1.aspx" />
@@ -248,6 +256,8 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CartI.cs" />
+    <Compile Include="CartItem.cs" />
     <Compile Include="Caterer.aspx.cs">
       <DependentUpon>Caterer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -269,12 +279,47 @@
     <Compile Include="CatererFolder\CatererAddingItem.aspx.designer.cs">
       <DependentUpon>CatererAddingItem.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CatererFolder\CatererHomePage.aspx.cs">
+      <DependentUpon>CatererHomePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\CatererHomePage.aspx.designer.cs">
+      <DependentUpon>CatererHomePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\CatererLogoChange.ascx.cs">
+      <DependentUpon>CatererLogoChange.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\CatererLogoChange.ascx.designer.cs">
+      <DependentUpon>CatererLogoChange.ascx</DependentUpon>
+    </Compile>
     <Compile Include="CatererFolder\CatererMenu.aspx.cs">
       <DependentUpon>CatererMenu.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CatererFolder\CatererMenu.aspx.designer.cs">
       <DependentUpon>CatererMenu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\CatererProfile.aspx.cs">
+      <DependentUpon>CatererProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\CatererProfile.aspx.designer.cs">
+      <DependentUpon>CatererProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\CatererProfileForm.ascx.cs">
+      <DependentUpon>CatererProfileForm.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\CatererProfileForm.ascx.designer.cs">
+      <DependentUpon>CatererProfileForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CatererFolder\CatererViewAllPackages.aspx.cs">
+      <DependentUpon>CatererViewAllPackages.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererFolder\CatererViewAllPackages.aspx.designer.cs">
+      <DependentUpon>CatererViewAllPackages.aspx</DependentUpon>
     </Compile>
     <Compile Include="CatererFolder\Delete.aspx.cs">
       <DependentUpon>Delete.aspx</DependentUpon>
@@ -366,6 +411,13 @@
     </Compile>
     <Compile Include="Customer\UserProfileForm.ascx.designer.cs">
       <DependentUpon>UserProfileForm.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Customer\UserProfileImage.ascx.cs">
+      <DependentUpon>UserProfileImage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Customer\UserProfileImage.ascx.designer.cs">
+      <DependentUpon>UserProfileImage.ascx</DependentUpon>
     </Compile>
     <Compile Include="DataAccess.cs" />
     <Compile Include="Default.aspx.cs">
@@ -505,12 +557,26 @@
     <Compile Include="UserForgotPassword.aspx.designer.cs">
       <DependentUpon>UserForgotPassword.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserViewingAllCaterer.ascx.cs">
+      <DependentUpon>UserViewingAllCaterer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserViewingAllCaterer.ascx.designer.cs">
+      <DependentUpon>UserViewingAllCaterer.ascx</DependentUpon>
+    </Compile>
     <Compile Include="UserViewingPackages.ascx.cs">
       <DependentUpon>UserViewingPackages.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="UserViewingPackages.ascx.designer.cs">
       <DependentUpon>UserViewingPackages.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserViewingtems.ascx.cs">
+      <DependentUpon>UserViewingtems.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserViewingtems.ascx.designer.cs">
+      <DependentUpon>UserViewingtems.ascx</DependentUpon>
     </Compile>
     <Compile Include="UserViewPackages.aspx.cs">
       <DependentUpon>UserViewPackages.aspx</DependentUpon>
@@ -543,6 +609,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="CatererFolder\PackageImage\" />
+    <Folder Include="Customer\CustomerProfilePicture\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

@@ -1,7 +1,7 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/FrontEnd.Master" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="Project_CuisineDelight.UserProfile" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Master/FrontEnd.Master" AutoEventWireup="true" CodeBehind="CatererProfile.aspx.cs" Inherits="Project_CuisineDelight.CatererFolder.CatererProfile" %>
 
-<%@ Register Src="~/Customer/UserProfileForm.ascx" TagPrefix="uc1" TagName="UserProfileForm" %>
-<%@ Register Src="~/Customer/UserProfileImage.ascx" TagPrefix="uc1" TagName="UserProfileImage" %>
+<%@ Register Src="~/CatererFolder/CatererLogoChange.ascx" TagPrefix="uc1" TagName="CatererLogoChange" %>
+<%@ Register Src="~/CatererFolder/CatererProfileForm.ascx" TagPrefix="uc1" TagName="CatererProfileForm" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
@@ -25,11 +25,9 @@
                                      </div>
                                      <div class="row">
                                          <div class="col">
-                                             <%--<div class="text-center">
-                                                 <asp:Image ID="Image1" runat="server" Height="200px" ImageUrl="https://cdn-icons-png.flaticon.com/512/149/149071.png" Width="200px" />
-                                             </div>--%>
+                                            
                                               <div class="text-center" style="margin-left:23%">
-                                                  <uc1:UserProfileImage runat="server" ID="UserProfileImage" />
+                                                  <uc1:CatererLogoChange runat="server" ID="CatererLogoChange" />
                                               </div>
                                          </div>
                                      </div>
@@ -62,8 +60,8 @@
                          <div class="col-md-7"  style=" padding:2em;min-height:650px">
                              
                                       <div class="row">
-                                          <h2>Edit Profile</h2>
-                                          <uc1:UserProfileForm runat="server" id="UserProfileForm" />
+                                          <h2>Edit Caterer Profile</h2>
+                                          <uc1:CatererProfileForm runat="server" id="CatererProfileForm" />
                                       </div> 
                              <br />
                                       <div class="row">
@@ -162,14 +160,7 @@
                                          </asp:ChangePassword>
                                       </div> 
                                <br />
-                                       <div class="row">
-                                         <div class="col">
-                                             <div>
-                                                 <a href="#" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Edit My Wallet</a>
-                                            
-                                             </div>
-                                         </div>
-                                     </div>
+                                      
                                  
                         </div>
                     </div>
@@ -177,9 +168,5 @@
           </LoggedInTemplate>  
       </asp:LoginView>
     
-
-
-    
-      
 
 </asp:Content>

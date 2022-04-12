@@ -1,4 +1,9 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchCatererPackageShow.ascx.cs" Inherits="Project_CuisineDelight.SearchCatererPackageShow" %>
+﻿﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="SearchCatererPackageShow.ascx.cs" Inherits="Project_CuisineDelight.SearchCatererPackageShow" %>
+<style type="text/css">
+    .auto-style1 {
+        height: 26px;
+    }
+</style>
 <asp:DataList ID="SearchCaterePackages" runat="server" RepeatDirection="Horizontal" RepeatColumns="4" CellPadding="5" CellSpacing="5" HorizontalAlign="Justify" Width="743px">
     <ItemStyle HorizontalAlign="Center" BackColor="White" Wrap="False" />
     <ItemTemplate>
@@ -19,19 +24,21 @@
                 <td>Price: <asp:Label ID="Label2" runat="server" Text='<%# "$ "+ Eval("Package_Price") %>'></asp:Label></td>               
             </tr>
              <tr  align="center">
-                 <td>
+                 <td class="auto-style1">
                       <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl='<%# "UserViewPackages.aspx?IDPakcageCAT="+Eval("Package_ID")+"&IDCAT="+Eval("UserId") %>' Text='View'></asp:HyperLink>             
            
                  </td>
               </tr>  
             <tr  align="center">
+                 <asp:LoginView ID="LoginView1" runat="server">
+                <LoggedInTemplate>
                 <td>
-                    <asp:Label ID="Label3" runat="server" Text="Quantity"></asp:Label>
-                    <asp:TextBox ID="ItemQuantity" runat="server" Width="70px" TextMode="Number" Text="0"></asp:TextBox>
-                    <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl='<%# "ShoppingCart.aspx?IDPakcageCAT="+Eval("Package_ID") %>' Text='Add to Cart'></asp:HyperLink>
-                    &nbsp&nbsp
+                      <asp:Button ID="btnAddToCart" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" runat="server" Text="Add to Cart" OnClick="btnAddToCart_Click" CommandArgument='<%# Eval("Package_ID") %>' />
                    
                 </td>
+                 </LoggedInTemplate>
+
+            </asp:LoginView>
             </tr>
         </table>
         <br />
