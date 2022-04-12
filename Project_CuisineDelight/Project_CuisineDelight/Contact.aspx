@@ -10,14 +10,14 @@
         <p>We would love to hear from you. Get in touch with us!</p>
         <hr />
         <div class="row">
-          <form class="form-horizontal" action="" method="post">
+          <form class="form-horizontal">
           <fieldset>
     
             <!-- Name input-->
             <div class="form-group">
               <label class="col-md-3 control-label" for="name">Name</label>
               <div class="col-md-9">
-                <input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+                  <asp:TextBox ID="TextBox1" runat="server" Width="850px"></asp:TextBox>
               </div>
             </div>
             <br /><br />
@@ -25,7 +25,7 @@
             <div class="form-group">
               <label class="col-md-3 control-label" for="email">Your E-mail</label>
               <div class="col-md-9">
-                <input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+                  <asp:TextBox ID="TextBox2" runat="server" Width="850px"></asp:TextBox>
               </div>
             </div>
             <br /><br />
@@ -33,15 +33,18 @@
             <div class="form-group">
               <label class="col-md-3 control-label" for="message">Your message</label>
               <div class="col-md-9">
-                <textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+                  <asp:TextBox ID="TextBox3" runat="server" Height="100px" Width="850px"></asp:TextBox>
               </div>
             </div>
             <br /><br /><br /><br /><br /><br />
             <!-- Form actions -->
             <div class="form-group">
-              <div class="col-md-12 text-right">
-                <button type="submit" class="btn btn-primary btn-lg">Submit</button>
-              </div>
+                <div class="col-md-10 text-left">
+                   <asp:Label ID="Label1" runat="server" ForeColor="#009933"></asp:Label>
+                </div>
+                <div class="col-md-2 text-right">
+                  <asp:Button ID="Button1" runat="server" Text="Submit" OnClick="Button1_Click" />
+                </div>
             </div>
           </fieldset>
           </form>

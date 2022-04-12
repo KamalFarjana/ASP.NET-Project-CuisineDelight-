@@ -4,8 +4,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%--<asp:LoginView ID="LoginView1" runat="server" OnViewChanged="LoginView1_ViewChanged">
-        <LoggedInTemplate>--%>
+    <asp:LoginView ID="LoginView1" runat="server" OnViewChanged="LoginView1_ViewChanged">
+        <LoggedInTemplate>
             <div>
              <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
             </div>
@@ -83,6 +83,6 @@
         </div>
     </div>
     </div>
-    <%-- </LoggedInTemplate>
-    </asp:LoginView>--%>
+     </LoggedInTemplate>
+    </asp:LoginView>
 </asp:Content>

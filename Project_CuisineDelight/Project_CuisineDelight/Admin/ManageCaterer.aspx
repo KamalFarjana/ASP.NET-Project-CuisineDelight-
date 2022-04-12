@@ -2,8 +2,8 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-    <%--<asp:LoginView ID="LoginView1" runat="server" OnViewChanged="LoginView1_ViewChanged">
-        <LoggedInTemplate>--%>
+    <asp:LoginView ID="LoginView1" runat="server" OnViewChanged="LoginView1_ViewChanged">
+        <LoggedInTemplate>
             <div>
              <asp:SiteMapPath ID="SiteMapPath1" runat="server"></asp:SiteMapPath>
             </div>
@@ -12,7 +12,7 @@
                 <h1>Manage Caterer</h1>
                 <hr />
                 <div class="row">
-                    <asp:GridView ID="GridView1" runat="server" CellPadding="4" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" ForeColor="#333333" GridLines="None">
+                    <asp:GridView ID="GridView1" runat="server" CellPadding="4" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged" ForeColor="#333333" GridLines="None" Width="1104px">
                         <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:CommandField ShowSelectButton="True" />
@@ -38,6 +38,6 @@
             </div>
             
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT [UserId], [Email], [IsApproved], [CreateDate] FROM [Memberships] ORDER BY [CreateDate] DESC"></asp:SqlDataSource>
-    <%-- </LoggedInTemplate>
-    </asp:LoginView>--%>
+     </LoggedInTemplate>
+    </asp:LoginView>
 </asp:Content>
