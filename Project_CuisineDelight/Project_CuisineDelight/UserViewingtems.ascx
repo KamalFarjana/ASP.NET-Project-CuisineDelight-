@@ -10,7 +10,7 @@
                 
             </tr>
             <tr align="center" >
-                <td >Caterer Name:<asp:Label ID="Label1" runat="server" Text='<%# Eval("Item_Name") %>'></asp:Label> </td>
+                <td >Item Name:<asp:Label ID="Label1" runat="server" Text='<%# Eval("Item_Name") %>'></asp:Label> </td>
                 
             </tr>
      

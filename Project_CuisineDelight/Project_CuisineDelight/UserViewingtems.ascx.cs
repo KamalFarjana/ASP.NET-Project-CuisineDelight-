@@ -15,7 +15,7 @@ namespace Project_CuisineDelight
 
             {
 
-                ViewAllItems.DataSource = DataAccess.SelectQuery("SELECT * from Items as CD inner join Users as U on CD.UserId = U.UserId inner join UserDetails as Ud on Ud.UserId = u.UserId");
+                ViewAllItems.DataSource = DataAccess.SelectQuery("SELECT * from Items as CD inner join Users as U on CD.UserId = U.UserId inner join UserDetails as Ud on Ud.UserId = u.UserId where Ud.UserType = '2'");
                 ViewAllItems.DataBind();
 
 

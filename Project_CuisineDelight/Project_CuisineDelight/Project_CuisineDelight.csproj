@@ -176,6 +176,8 @@
     <Content Include="SearchCatererPackageShow.ascx" />
     <Content Include="SearchCatererView.aspx" />
     <Content Include="SearchControl.ascx" />
+    <Content Include="SearchForOrder.aspx" />
+    <Content Include="searchOrderControl.ascx" />
     <Content Include="SearchResults.aspx" />
     <Content Include="SignupCaterer.aspx" />
     <Content Include="SignupSelectionAsCustomerORCaterer.aspx" />
@@ -525,6 +527,20 @@
     </Compile>
     <Compile Include="SearchControl.ascx.designer.cs">
       <DependentUpon>SearchControl.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="SearchForOrder.aspx.cs">
+      <DependentUpon>SearchForOrder.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SearchForOrder.aspx.designer.cs">
+      <DependentUpon>SearchForOrder.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="searchOrderControl.ascx.cs">
+      <DependentUpon>searchOrderControl.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="searchOrderControl.ascx.designer.cs">
+      <DependentUpon>searchOrderControl.ascx</DependentUpon>
     </Compile>
     <Compile Include="SearchResults.aspx.cs">
       <DependentUpon>SearchResults.aspx</DependentUpon>

@@ -50,7 +50,7 @@ namespace Project_CuisineDelight.CatererFolder
                     int k = mycommand.ExecuteNonQuery();
                     if (k > 0)
                     {
-                        msg.Text = "You have successfully listed a new item";
+                        msg.Text = "You have successfully listed a new package";
                         PackageName.Text = "";
                         PackageDesciption.Text = "";
                         PackageDiscount.Text = "";
