@@ -11,34 +11,37 @@
     <link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />  
     
 </head>
-<body style="font-size: large;" font-family: 'Arial Rounded MT Bold';">
-     <main >
+<body class="mybgcolor" style="font-size: large;" font-family: 'Arial Rounded MT Bold';">
+     
        
         <form id="form1" runat="server" style="margin-top:2.9em; margin-bottom:6em">
-
-
+                
+            <main  class="mybgcolor">
            <nav class="navbar navbar-inverse navbar-fixed-top" style="font-size:large">
            <div class="container-fluid">  
                     <div class="navbar-header">  
                        <a class="navbar-brand" runat="server" href="~/Default.aspx"><span style="color:#a852c6; font-size:xx-large">Cuisine</span><span style="color:#33cee1; font-size:xx-large">Delight</span></a>
                     </div>                  
                     <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/Default.aspx">Home</a></li>
-                        <li><a runat="server" href="~/About.aspx">About Us</a></li>
-                        <li><a runat="server" href="~/FAQ.aspx">FAQ</a></li>
-                        <li><a runat="server" href="~/Caterer.aspx">Caterers</a></li>
-                        <li><a runat="server" href="~/Food.aspx">Food</a></li>
-                         <li><a runat="server" href="~/CatererFolder/CatererMenu.aspx">Menu</a></li>
+                        <li> <asp:LinkButton ID="LinkButton5" class="navbar-link footerlinks" runat="server" OnClick="LinkButton5_Click">Home</asp:LinkButton></li>
+                        <li> <asp:LinkButton ID="LinkButton6" class="navbar-link footerlinks" runat="server" OnClick="LinkButton6_Click">About Us</asp:LinkButton></li>
+                        <li> <asp:LinkButton ID="LinkButton7" class="navbar-link footerlinks" runat="server" OnClick="LinkButton7_Click">FAQ</asp:LinkButton></li>
+                        <li> <asp:LinkButton ID="LinkButton8" class="navbar-link footerlinks" runat="server" OnClick="LinkButton8_Click">Caterers</asp:LinkButton></li>
+                        <li> <asp:LinkButton ID="LinkButton9" class="navbar-link footerlinks" runat="server" OnClick="LinkButton9_Click">Food</asp:LinkButton></li>
+                        <li> <asp:LinkButton ID="LinkButton10" class="navbar-link footerlinks" runat="server" OnClick="LinkButton10_Click">Menu</asp:LinkButton></li>
+                        <li> <asp:LinkButton ID="LinkButton13" class="navbar-link footerlinks" runat="server" OnClick="LinkButton13_Click">My Orders</asp:LinkButton></li>
+                        <li> <asp:LinkButton ID="LinkButton14" class="navbar-link footerlinks" runat="server" OnClick="LinkButton14_Click">Orders</asp:LinkButton></li>
+                        <li> <asp:LinkButton ID="LinkButton15" class="navbar-link footerlinks" runat="server" OnClick="LinkButton15_Click" Visible="False"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</asp:LinkButton></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right" id="login-signup">
                         <asp:LoginView ID="LoginView1" runat="server">
                             <AnonymousTemplate>
                                  <li><a runat="server" href="~/SignupSelectionAsCustomerORCaterer.aspx"><span class="glyphicon glyphicon-user"></span> Signup</a></li>
-                                 <li><a runat="server" href="~/LoginSelectionAsCatereorCustomer.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>   
+                                 <li><a runat="server" href="~/LoginSelectionAsCatereorCustomer.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                             </AnonymousTemplate>
                             <LoggedInTemplate>
-                                  <li><a runat="server" href="~/ShoppingCart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a></li>
-                                 <li><a runat="server" href="~/Customer/UserProfile.aspx"><span class="glyphicon glyphicon-user"></span><asp:LoginName ID="LoginName1" runat="server" FormatString=" {0}" /></a></li>                               
+                                <li> <asp:LinkButton ID="LinkButton11" class="navbar-link footerlinks" runat="server" OnClick="LinkButton11_Click" Visible="False"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</asp:LinkButton></li>
+                                <li> <asp:LinkButton ID="LinkButton12" class="navbar-link footerlinks" runat="server" OnClick="LinkButton12_Click"><span class="glyphicon glyphicon-user"></span><asp:LoginName ID="LoginName1" runat="server" FormatString=" {0}" /></asp:LinkButton></li>       
                                   <li><a id="AnchorButton" onserverclick="Logout" runat="server">Logout</a></li> 
                                                         
                             </LoggedInTemplate>
@@ -49,7 +52,7 @@
                <div class="navbar-form navbar-right">
                         <asp:TextBox ID="SearchingFood" runat="server" placeholder="Search your food"></asp:TextBox>
                         
-                         <asp:Button ID="Button1" runat="server" Text="Button" OnClick="btnSearch_Click" />
+                         <asp:Button ID="Button1" runat="server" Text="Search" OnClick="btnSearch_Click" />
                 </div>
               
                  
@@ -66,21 +69,28 @@
                 <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
                 </asp:ContentPlaceHolder>
             </div>
-        </form>
+        
     </main>
 
     <div id="Divfooter">
              <footer>
                  <div class="navbar navbar-inverse navbar-fixed-bottom" id="footer">
-                        <div class="container">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12 text-center">
+                                    <p class="text-decoration-none">
+                                        <asp:LinkButton ID="LinkButton1" class="navbar-link footerlinks" runat="server" OnClick="LinkButton1_Click">Admin Login</asp:LinkButton> &nbsp;
+                                        <asp:LinkButton ID="LinkButton2" class="navbar-link footerlinks" runat="server" Visible="False" OnClick="LinkButton2_Click">Dashboard</asp:LinkButton>&nbsp;
+                                        <asp:LinkButton ID="LinkButton3" class="navbar-link footerlinks" runat="server" Visible="False" OnClick="LinkButton3_Click">Report</asp:LinkButton>&nbsp;
+                                        <asp:LinkButton ID="LinkButton4" class="navbar-link footerlinks" runat="server" Visible="False" OnClick="LinkButton4_Click">Manage Caterer</asp:LinkButton>&nbsp;
+                                    </p>
+                                </div>
+                            </div>
                                <div class="row">
                                 <div class="col-md-5">
                                    <ul class="nav navbar-nav sc-center">
                                        <li><a runat="server" href="~/Default.aspx"><span style="color:#a852c6">Cuisine</span><span style="color:#33cee1">Delight</span> </a></li>                                      
-                                       <li><i class="fa fa-twitter" style="font-size:20px;color:cornflowerblue;margin-left:2px;margin-right:2px;margin-top:15px"></i></li> 
-                                       <li><i class="fa fa-facebook-official" style="font-size:20px;color:deepskyblue;margin-left:2px;margin-right:2px;margin-top:15px"></i></li>
-                                       <li><i class="fa fa-instagram" style="font-size:20px;color:deeppink;margin-left:2px;margin-right:2px;margin-top:15px"></i></li>
-                                       <li><i class="fa fa-whatsapp" style="font-size:20px;color:lawngreen;margin-left:2px;margin-right:2px;margin-top:15px"></i></li>
+                                       
                                        </ul>
                                 </div>
                            
@@ -92,6 +102,10 @@
                                 <div class="col-md-2">
                                     <ul class="nav navbar-nav sc-center">
                                         <li><a runat="server" href="~/Contact.aspx">Contact Us</a></li>
+                                        <li><i class="fa fa-twitter" style="font-size:20px;color:cornflowerblue;margin-left:2px;margin-right:2px;margin-top:15px"></i></li> 
+                                       <li><i class="fa fa-facebook-official" style="font-size:20px;color:deepskyblue;margin-left:2px;margin-right:2px;margin-top:15px"></i></li>
+                                       <li><i class="fa fa-instagram" style="font-size:20px;color:deeppink;margin-left:2px;margin-right:2px;margin-top:15px"></i></li>
+                                       <li><i class="fa fa-whatsapp" style="font-size:20px;color:lawngreen;margin-left:2px;margin-right:2px;margin-top:15px"></i></li>
                                     </ul>
                                 </div>
                             </div>
@@ -99,7 +113,8 @@
                 </div>
 
              </footer>
-        </div>   
+        </div> 
+    </form>
 </body>
  
 </html>

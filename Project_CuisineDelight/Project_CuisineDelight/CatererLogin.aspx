@@ -4,6 +4,9 @@
         .auto-style1 {
             height: 38px;
         }
+         .auto-style2 {
+             height: 32px;
+         }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -52,13 +55,13 @@
                                              </td>
                                          </tr>
                                          <tr>
-                                             <td align="center" colspan="2" style="color:Red;">
+                                             <td align="center" colspan="2" style="color:Red;" class="auto-style2">
                                                  <asp:Literal ID="FailureText" runat="server" EnableViewState="False"></asp:Literal>
                                              </td>
                                          </tr>
                                          <tr>
                                              <td align="right" colspan="2">
-                                                 <asp:Button ID="LoginButton" runat="server" BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" CommandName="Login" Font-Names="Arial Rounded MT Bold" Font-Size="Large" ForeColor="#284E98" Text="Log In" ValidationGroup="ctl07$Login1" />
+                                                 <asp:Button ID="LoginButton" runat="server" BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" CommandName="Login" Font-Names="Arial Rounded MT Bold" Font-Size="Large" ForeColor="#284E98" Text="Log In" ValidationGroup="ctl07$Login1" OnClick="LoginButton_Click" />
                                              </td>
                                          </tr>
                                          <tr>

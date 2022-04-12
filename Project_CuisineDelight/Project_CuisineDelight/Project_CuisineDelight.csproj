@@ -117,6 +117,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Admin\Dashboard.aspx" />
+    <Content Include="Admin\Login.aspx" />
     <Content Include="Admin\ManageCaterer.aspx" />
     <Content Include="Admin\Report.aspx" />
     <Content Include="App_Data\SignupConfirmation.txt" />
@@ -241,6 +242,13 @@
     </Compile>
     <Compile Include="Admin\Dashboard.aspx.designer.cs">
       <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ManageCaterer.aspx.cs">
       <DependentUpon>ManageCaterer.aspx</DependentUpon>

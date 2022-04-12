@@ -58,7 +58,7 @@
                                          </tr>
                                          <tr>
                                              <td align="right" colspan="2">
-                                                 <asp:Button ID="LoginButton" runat="server" BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" CommandName="Login" Font-Names="Arial Rounded MT Bold" Font-Size="Large" ForeColor="#284E98" Text="Log In" ValidationGroup="ctl07$Login1" />
+                                                 <asp:Button ID="LoginButton" runat="server" BackColor="White" BorderColor="#507CD1" BorderStyle="Solid" BorderWidth="1px" CommandName="Login" Font-Names="Arial Rounded MT Bold" Font-Size="Large" ForeColor="#284E98" Text="Log In" ValidationGroup="ctl07$Login1" OnClick="LoginButton_Click" />
                                              </td>
                                          </tr>
                                          <tr>
