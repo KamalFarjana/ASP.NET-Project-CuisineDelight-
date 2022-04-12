@@ -38,10 +38,9 @@ namespace Project_CuisineDelight
                 Button btn = sender as Button;
                 string id = btn.CommandArgument.ToString();
 
-
                 myCart = (CartI)Session["myCart"];
 
-                DataTable dt = DataAccess.SelectQuery("SELECT * FROM Packages WHERE Package_ID=" + id);
+                DataTable dt = DataAccess.SelectQuery("SELECT * FROM Packages WHERE Package_ID=" +id);
                 DataRow row = dt.Rows[0];
                 myCart.Insert(new CartItem(Int32.Parse(id),
                   row["Package_Name"].ToString(),
@@ -58,7 +57,7 @@ namespace Project_CuisineDelight
                 Button btn = sender as Button;
                 string id = btn.CommandArgument.ToString();
                 myCart = (CartI)Session["myCart"];
-                DataTable dt = DataAccess.SelectQuery("SELECT * FROM Packages WHERE Package_ID=" + id);
+                DataTable dt = DataAccess.SelectQuery("SELECT * FROM Packages WHERE Package_ID='" + id + "'");
                 DataRow row = dt.Rows[0];
                 myCart.Insert(new CartItem(Int32.Parse(id),
                   row["Package_Name"].ToString(),

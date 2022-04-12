@@ -32,8 +32,8 @@
                         <li> <asp:LinkButton ID="LinkButton10" class="navbar-link footerlinks" runat="server" OnClick="LinkButton10_Click">Menu</asp:LinkButton></li>
                         <li> <asp:LinkButton ID="LinkButton13" class="navbar-link footerlinks" runat="server" OnClick="LinkButton13_Click">My Orders</asp:LinkButton></li>
                         <li> <asp:LinkButton ID="LinkButton14" class="navbar-link footerlinks" runat="server" OnClick="LinkButton14_Click">Orders</asp:LinkButton></li>
-                        <li> <asp:LinkButton ID="LinkButton17" class="navbar-link footerlinks" runat="server" OnClick="LinkButton17_Click" Visible="False"><span class="glyphicon glyphicon-user"></span>Profile</asp:LinkButton></li>
-                        <li> <asp:LinkButton ID="LinkButton18" class="navbar-link footerlinks" runat="server" OnClick="LinkButton18_Click" Visible="False"><span class="glyphicon glyphicon-user"></span>Profile</asp:LinkButton></li>
+                        <li> <asp:LinkButton ID="LinkButton17" class="navbar-link footerlinks" runat="server" OnClick="LinkButton17_Click" Visible="False">Profile</asp:LinkButton></li>
+                        <li> <asp:LinkButton ID="LinkButton18" class="navbar-link footerlinks" runat="server" OnClick="LinkButton18_Click" Visible="False">Profile</asp:LinkButton></li>
                         <li> <asp:LinkButton ID="LinkButton15" class="navbar-link footerlinks" runat="server" OnClick="LinkButton15_Click" Visible="False"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</asp:LinkButton></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right" id="login-signup">
@@ -44,7 +44,7 @@
                             </AnonymousTemplate>
                             <LoggedInTemplate>
                                 <li> <%--<asp:LinkButton ID="LinkButton11" class="navbar-link footerlinks" runat="server" OnClick="LinkButton11_Click" Visible="False"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</asp:LinkButton>--%></li>
-                                <li> <asp:LinkButton ID="LinkButton12" class="navbar-link footerlinks" runat="server" OnClick="LinkButton12_Click"><span class="glyphicon glyphicon-user"></span><asp:LoginName ID="LoginName1" runat="server" FormatString=" {0}" /></asp:LinkButton></li>       
+                                <li> <asp:LinkButton ID="LinkButton12" class="navbar-link footerlinks" runat="server"><span class="glyphicon glyphicon-user"></span><asp:LoginName ID="LoginName1" runat="server" FormatString=" {0}" /></asp:LinkButton></li>       
                                   <li><asp:LoginStatus ID="LoginStatus1" runat="server" LogoutAction="Redirect" LogoutPageUrl="~/LoginSelectionAsCatereorCustomer.aspx" /></li> 
                                                         
                             </LoggedInTemplate>
