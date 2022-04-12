@@ -34,7 +34,7 @@
                         <asp:LoginView ID="LoginView1" runat="server">
                             <AnonymousTemplate>
                                  <li><a runat="server" href="~/SignupSelectionAsCustomerORCaterer.aspx"><span class="glyphicon glyphicon-user"></span> Signup</a></li>
-                                 <li><a runat="server" href="~/Login.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>   
+                                 <li><a runat="server" href="~/LoginSelectionAsCatereorCustomer.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>   
                             </AnonymousTemplate>
                             <LoggedInTemplate>
                                   <li><a runat="server" href="~/ShoppingCart.aspx"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</a></li>
