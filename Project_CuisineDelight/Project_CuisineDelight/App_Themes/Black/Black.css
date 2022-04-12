@@ -4,3 +4,7 @@
 .mybgcolor {
     background-color: gray;
 }
+
+.footerlinks {
+    text-decoration: none !important;
+}

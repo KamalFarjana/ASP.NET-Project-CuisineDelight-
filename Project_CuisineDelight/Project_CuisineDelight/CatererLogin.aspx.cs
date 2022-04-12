@@ -13,5 +13,10 @@ namespace Project_CuisineDelight
         {
 
         }
+
+        protected void LoginButton_Click(object sender, EventArgs e)
+        {
+            Session["role"] = "caterer";
+        }
     }
 }

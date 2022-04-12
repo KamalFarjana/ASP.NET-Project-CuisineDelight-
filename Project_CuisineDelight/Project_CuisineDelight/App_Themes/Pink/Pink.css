@@ -4,3 +4,7 @@
 .mybgcolor {
     background-color: pink;
 }
+
+.footerlinks {
+    text-decoration: none !important;
+}
