@@ -7,7 +7,7 @@
         <table style="width: 100%;">
              <tr>
                 <td>
-                   <asp:Image ID="Image1" runat="server" ImageUrl='<%# "PackageImage/"+Eval("Logo") %>' Width="300" Height="300" style="padding:0.4em" /> </td>
+                   <asp:Image ID="Image1" runat="server" ImageUrl='<%# "CatererFolder/CatererProfileImage/"+Eval("Logo") %>' Width="300" Height="300" style="padding:0.4em " /> </td>
                 
             </tr>
             <tr align="center" >
