@@ -7,29 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Project_CuisineDelight
+namespace Project_CuisineDelight.CatererFolder
 {
 
 
-    public partial class Food
+    public partial class CatererLogoChange
     {
 
         /// <summary>
-        /// SiteMapPath1 control.
+        /// DataList1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SiteMapPath SiteMapPath1;
-
-        /// <summary>
-        /// UserViewingtems control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::Project_CuisineDelight.UserViewingtems UserViewingtems;
+        protected global::System.Web.UI.WebControls.DataList DataList1;
     }
 }
