@@ -632,6 +632,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="CatererFolder\CatererProfileImage\" />
     <Folder Include="CatererFolder\PackageImage\" />
     <Folder Include="Customer\CustomerProfilePicture\" />
   </ItemGroup>

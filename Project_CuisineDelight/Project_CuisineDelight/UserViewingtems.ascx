@@ -1,5 +1,5 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="UserViewingtems.ascx.cs" Inherits="Project_CuisineDelight.UserViewingtems" %>
-<asp:DataList ID="ViewAllItems" runat="server" RepeatColumns="4" RepeatDirection="Horizontal" >
+<asp:DataList ID="ViewAllItems" runat="server" RepeatColumns="2" RepeatDirection="Horizontal" >
      <ItemTemplate>
 
         
