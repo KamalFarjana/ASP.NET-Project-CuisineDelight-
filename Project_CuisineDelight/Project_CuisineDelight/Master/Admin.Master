@@ -1,15 +1,15 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="FrontEnd.master.cs" Inherits="Project_CuisineDelight.FrontEnd" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Admin.master.cs" Inherits="Project_CuisineDelight.Master.Admin" %>
 
 <!DOCTYPE html>
 
 <html>
 <head runat="server">
-    <title>CuisineDelight</title>
+    <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>  
+    </asp:ContentPlaceHolder>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="../Content/bootstrap.css" rel="stylesheet" type="text/css" />  
-    
+
 </head>
 <body class="mybgcolor" style="font-size: large;" font-family: 'Arial Rounded MT Bold';">
      
@@ -23,18 +23,14 @@
                        <span style="color:#a852c6; font-size:xx-large">Cuisine</span><span style="color:#33cee1; font-size:xx-large">Delight</span>
                     </div>                  
                     <ul class="nav navbar-nav">
+                        <li> <asp:LinkButton ID="LinkButton2" class="navbar-link footerlinks" runat="server" OnClick="LinkButton2_Click" Visible="False">Dashboard</asp:LinkButton></li>
+                        <li> <asp:LinkButton ID="LinkButton3" class="navbar-link footerlinks" runat="server" OnClick="LinkButton3_Click" Visible="False">Report</asp:LinkButton></li>
+                        <li> <asp:LinkButton ID="LinkButton4" class="navbar-link footerlinks" runat="server" OnClick="LinkButton4_Click" Visible="False">Manage Caterer</asp:LinkButton></li>
                         <li> <asp:LinkButton ID="LinkButton5" class="navbar-link footerlinks" runat="server" OnClick="LinkButton5_Click">Home</asp:LinkButton></li>
-                        <li> <asp:LinkButton ID="LinkButton16" class="navbar-link footerlinks" runat="server" OnClick="LinkButton16_Click">Home</asp:LinkButton></li>
                         <li> <asp:LinkButton ID="LinkButton6" class="navbar-link footerlinks" runat="server" OnClick="LinkButton6_Click">About Us</asp:LinkButton></li>
                         <li> <asp:LinkButton ID="LinkButton7" class="navbar-link footerlinks" runat="server" OnClick="LinkButton7_Click">FAQ</asp:LinkButton></li>
                         <li> <asp:LinkButton ID="LinkButton8" class="navbar-link footerlinks" runat="server" OnClick="LinkButton8_Click">Caterers</asp:LinkButton></li>
                         <li> <asp:LinkButton ID="LinkButton9" class="navbar-link footerlinks" runat="server" OnClick="LinkButton9_Click">Food</asp:LinkButton></li>
-                        <li> <asp:LinkButton ID="LinkButton10" class="navbar-link footerlinks" runat="server" OnClick="LinkButton10_Click">Menu</asp:LinkButton></li>
-                        <li> <asp:LinkButton ID="LinkButton13" class="navbar-link footerlinks" runat="server" OnClick="LinkButton13_Click">My Orders</asp:LinkButton></li>
-                        <li> <asp:LinkButton ID="LinkButton14" class="navbar-link footerlinks" runat="server" OnClick="LinkButton14_Click">Orders</asp:LinkButton></li>
-                        <li> <asp:LinkButton ID="LinkButton17" class="navbar-link footerlinks" runat="server" OnClick="LinkButton17_Click" Visible="False">Caterer Profile</asp:LinkButton></li>
-                        <li> <asp:LinkButton ID="LinkButton18" class="navbar-link footerlinks" runat="server" OnClick="LinkButton18_Click" Visible="False">Customer Profile</asp:LinkButton></li>
-                        <li> <asp:LinkButton ID="LinkButton15" class="navbar-link footerlinks" runat="server" OnClick="LinkButton15_Click" Visible="False"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</asp:LinkButton></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right" id="login-signup">
                         <asp:LoginView ID="LoginView1" runat="server">
@@ -43,8 +39,7 @@
                                  <li><a runat="server" href="~/LoginSelectionAsCatereorCustomer.aspx"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
                             </AnonymousTemplate>
                             <LoggedInTemplate>
-                                <li> <%--<asp:LinkButton ID="LinkButton11" class="navbar-link footerlinks" runat="server" OnClick="LinkButton11_Click" Visible="False"><span class="glyphicon glyphicon-shopping-cart"></span> Shopping Cart</asp:LinkButton>--%></li>
-                                <li> <asp:LinkButton ID="LinkButton12" class="navbar-link footerlinks" runat="server" OnClick="LinkButton12_Click"><span class="glyphicon glyphicon-user"></span><asp:LoginName ID="LoginName1" runat="server" FormatString=" {0}" /></asp:LinkButton></li>       
+                                <li> <asp:LinkButton ID="LinkButton12" class="navbar-link footerlinks" runat="server"><span class="glyphicon glyphicon-user"></span><asp:LoginName ID="LoginName1" runat="server" FormatString=" {0}" /></asp:LinkButton></li>       
                                   <li><a id="AnchorButton" onserverclick="Logout" runat="server">Logout</a></li> 
                                                         
                             </LoggedInTemplate>
@@ -82,10 +77,7 @@
                             <div class="row">
                                 <div class="col-md-12 text-center">
                                     <p class="text-decoration-none">
-                                        <asp:LinkButton ID="LinkButton1" class="navbar-link footerlinks" runat="server" OnClick="LinkButton1_Click">Admin Login</asp:LinkButton> &nbsp;
-                                        <asp:LinkButton ID="LinkButton2" class="navbar-link footerlinks" runat="server" Visible="False" OnClick="LinkButton2_Click">Dashboard</asp:LinkButton>&nbsp;
-                                        <asp:LinkButton ID="LinkButton3" class="navbar-link footerlinks" runat="server" Visible="False" OnClick="LinkButton3_Click">Report</asp:LinkButton>&nbsp;
-                                        <asp:LinkButton ID="LinkButton4" class="navbar-link footerlinks" runat="server" Visible="False" OnClick="LinkButton4_Click">Manage Caterer</asp:LinkButton>&nbsp;
+                                        <asp:LinkButton ID="LinkButton1" class="navbar-link footerlinks" runat="server" OnClick="LinkButton1_Click">Admin Login</asp:LinkButton>
                                     </p>
                                 </div>
                             </div>
@@ -119,5 +111,4 @@
         </div> 
     </form>
 </body>
- 
 </html>
