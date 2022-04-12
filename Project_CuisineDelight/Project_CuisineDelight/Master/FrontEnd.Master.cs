@@ -20,6 +20,7 @@ namespace Project_CuisineDelight
             {
                 if (Session["role"] == null)
                 {
+                    LinkButton16.Visible = false; //home
                     LinkButton10.Visible = false;   //menu
                     LinkButton13.Visible = false;    //my orders
                     LinkButton14.Visible = false;    //orders

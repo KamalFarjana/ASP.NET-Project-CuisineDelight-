@@ -25,7 +25,7 @@ namespace Project_CuisineDelight.Admin
 
             string sql1 = "SELECT COUNT(*) FROM Orders";
             string sql2 = "SELECT COUNT(*) FROM Orders WHERE Order_Status='Pending'";
-            string sql3 = "SELECT COUNT(*) FROM Orders WHERE Order_Status='Confirmed'";
+            string sql3 = "SELECT COUNT(*) FROM Orders WHERE Order_Status='Approved'";
             string sql4 = "SELECT COUNT(*) FROM Orders WHERE Order_Status='Preparing'";
             string sql5 = "SELECT COUNT(*) FROM Orders WHERE Order_Status='Cancelled'";
             string sql6 = "SELECT COUNT(*) FROM UserDetails WHERE UserType=1";

@@ -29,10 +29,10 @@
 
           <div class="col-md-6">  
                <div class="text-center">
-                       <asp:Image onclick="window.location='Food.aspx'" ID="Image4" runat="server" Height="400px" Width="500px"  ImageUrl="https://i.pinimg.com/564x/dd/9d/c9/dd9dc9d83423bc037b511d73b29e6b80.jpg" />           
+                       <asp:Image onclick="window.location='Orders'" ID="Image4" runat="server" Height="400px" Width="500px"  ImageUrl="https://i.pinimg.com/564x/dd/9d/c9/dd9dc9d83423bc037b511d73b29e6b80.jpg" />           
               </div>
                <div class="text-center">
-                   <asp:Button ID="Button2" runat="server" Text="View Your Order" BackColor="#CCCCFF" BorderColor="Black" BorderStyle="Solid" BorderWidth="5px" ForeColor="#990099" Height="50px" Width="180px" PostBackUrl="~/Food.aspx" />                      
+                   <asp:Button ID="Button2" runat="server" Text="View Your Order" BackColor="#CCCCFF" BorderColor="Black" BorderStyle="Solid" BorderWidth="5px" ForeColor="#990099" Height="50px" Width="180px" PostBackUrl="~/CatererFolder/Orders" />                      
                </div>   
           </div>       
       </div>

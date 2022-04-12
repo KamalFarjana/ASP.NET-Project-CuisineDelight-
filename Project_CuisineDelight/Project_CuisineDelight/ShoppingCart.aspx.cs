@@ -131,7 +131,7 @@ namespace Project_CuisineDelight
             msg.Visible = true;
             myCart = new CartI();
             Session["myCart"] = myCart;
-            Response.Redirect("~/Default.aspx");
+            Response.Redirect("~/Customer/MyOrders.aspx");
         }
         protected void OrderIsinsertedtoTables(string name, int Item_PackageID, int price, int qty, int total, int type, int orderID)
         {

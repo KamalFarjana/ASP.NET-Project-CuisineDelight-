@@ -21,7 +21,7 @@
      
          
              <tr  align="center">
-                <td>Price: <asp:Label ID="Label2" runat="server" Text='<%# "$ "+ Eval("Package_Price") %>'></asp:Label></td>               
+                <td>Price: $ <asp:Label ID="Label2" runat="server" Text='<%#  Eval("Package_Price") %>'></asp:Label></td>               
             </tr>
              <tr  align="center">
                  <td class="auto-style1">

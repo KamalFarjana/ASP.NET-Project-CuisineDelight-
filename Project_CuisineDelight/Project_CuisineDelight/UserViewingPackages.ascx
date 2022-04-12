@@ -53,10 +53,15 @@
                    
                 </tr>
                 <tr>
+                    <asp:LoginView ID="LoginView1" runat="server">
+                <LoggedInTemplate>
                     <td></td>
                      <td>
-                             <div> <asp:Button ID="btnAddToCart" runat="server" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" Text="Add to Cart" OnClick="btnAddToCart_Click" BackColor="#996633" ForeColor="White" /></div>
+                             <div> <asp:Button ID="btnAddToCart" runat="server" class="btn btn-primary btn-lg active" role="button" aria-pressed="true" Text="Add to Cart" OnClick="btnAddToCart_Click" BackColor="#996633" ForeColor="White" CommandArgument='<%# Eval("Package_ID") %>'/></div>
                     </td>
+                      </LoggedInTemplate>
+
+            </asp:LoginView>
                 </tr>
                
             </table>

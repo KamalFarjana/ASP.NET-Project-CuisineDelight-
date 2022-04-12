@@ -76,7 +76,7 @@
                 </tr>
                 <tr>
                     <td  align="right"><asp:Label ID="Price" runat="server" Text=""></asp:Label>Price: </td>
-                    <td><asp:TextBox ID="ItemPrice" runat="server" Width="400px" TextMode="Number"></asp:TextBox></td>
+                    <td><asp:TextBox ID="ItemPrice" runat="server" Width="400px" TextMode="Number" text="0" ></asp:TextBox></td>
                     <td><asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter the price of the item"  ControlToValidate="ItemPrice"></asp:RequiredFieldValidator></td>                
                 </tr>
                 <tr >
