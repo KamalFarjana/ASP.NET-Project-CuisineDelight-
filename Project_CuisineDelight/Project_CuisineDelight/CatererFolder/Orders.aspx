@@ -12,7 +12,8 @@
                 <h1>Orders</h1>
                 <hr />
                 <div class="row">
-                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" DataKeyNames="OrderID" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1">
+                    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4" DataKeyNames="OrderID" DataSourceID="SqlDataSource1" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1" ForeColor="#333333" GridLines="None">
+                        <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:CommandField ShowSelectButton="True" />
                             <asp:BoundField DataField="OrderID" HeaderText="OrderID" ReadOnly="True" SortExpression="OrderID" />
@@ -20,15 +21,16 @@
                             <asp:BoundField DataField="TotalAmount" HeaderText="TotalAmount" SortExpression="TotalAmount" />
                             <asp:BoundField DataField="Order_Status" HeaderText="Order_Status" SortExpression="Order_Status" />
                         </Columns>
-                        <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-                        <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
-                        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
-                        <SortedAscendingCellStyle BackColor="#FFF1D4" />
-                        <SortedAscendingHeaderStyle BackColor="#B95C30" />
-                        <SortedDescendingCellStyle BackColor="#F1E5CE" />
-                        <SortedDescendingHeaderStyle BackColor="#93451F" />
+                        <EditRowStyle BackColor="#2461BF" />
+                        <FooterStyle BackColor="#507CD1" ForeColor="White" Font-Bold="True" />
+                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle ForeColor="White" HorizontalAlign="Center" BackColor="#2461BF" />
+                        <RowStyle BackColor="#EFF3FB" />
+                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
                     </asp:GridView>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT * FROM [CATERER_ORDER_LIST]"></asp:SqlDataSource>
                 </div>

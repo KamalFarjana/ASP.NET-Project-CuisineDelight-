@@ -18,20 +18,22 @@
             <h3>Report #1</h3>
             <div class="col-md-5">
                 <br /> <br /><br />
-                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="chart1" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2">
+                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="chart1" CellPadding="4" ForeColor="#333333" GridLines="None">
+                    <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:BoundField DataField="Month" HeaderText="Month" ReadOnly="True" SortExpression="Month" />
                         <asp:BoundField DataField="Total_Sale" HeaderText="Total_Sale" ReadOnly="True" SortExpression="Total_Sale" />
                     </Columns>
-                    <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-                    <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
-                    <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-                    <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
-                    <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
-                    <SortedAscendingCellStyle BackColor="#FFF1D4" />
-                    <SortedAscendingHeaderStyle BackColor="#B95C30" />
-                    <SortedDescendingCellStyle BackColor="#F1E5CE" />
-                    <SortedDescendingHeaderStyle BackColor="#93451F" />
+                    <EditRowStyle BackColor="#2461BF" />
+                    <FooterStyle BackColor="#507CD1" ForeColor="White" Font-Bold="True" />
+                    <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                    <PagerStyle ForeColor="White" HorizontalAlign="Center" BackColor="#2461BF" />
+                    <RowStyle BackColor="#EFF3FB" />
+                    <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                    <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                    <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                    <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                    <SortedDescendingHeaderStyle BackColor="#4870BE" />
                 </asp:GridView>
                 <asp:SqlDataSource ID="chart1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="select month(Orders.Order_Fulfilled_Date) as Month,sum(Order_Packages.[TotalAmount]) as Total_Sale from Orders inner join Order_Packages on Orders.OrderID = Order_Packages.OrderID group by month(Order_Fulfilled_Date) order by month(Order_Fulfilled_Date)"></asp:SqlDataSource>
             </div>
