@@ -121,7 +121,7 @@
     <Content Include="Admin\ManageCaterer.aspx" />
     <Content Include="Admin\Report.aspx" />
     <Content Include="App_Data\SignupConfirmation.txt" />
-    <Content Include="App_Themes\Black\Black.css" />
+    <Content Include="App_Themes\White\White.css" />
     <Content Include="App_Themes\Pink\Pink.css" />
     <Content Include="Caterer.aspx" />
     <Content Include="CatererFolder\AddingPackage.aspx" />
@@ -186,6 +186,7 @@
     <Content Include="UserViewPackages.aspx" />
     <Content Include="UserViewPackagesItems.ascx" />
     <Content Include="WebForm1.aspx" />
+    <Content Include="Master\Admin.Master" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -478,6 +479,13 @@
     </Compile>
     <Compile Include="LoginSelectionAsCatereorCustomer.aspx.designer.cs">
       <DependentUpon>LoginSelectionAsCatereorCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Master\Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Master\Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
     </Compile>
     <Compile Include="Master\FrontEnd.Master.cs">
       <DependentUpon>FrontEnd.Master</DependentUpon>
