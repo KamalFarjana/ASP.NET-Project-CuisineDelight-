@@ -12,23 +12,27 @@
                 <h1>My Orders</h1>
                 <hr />
                 <div class="row">
-                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="OrderID" DataSourceID="SqlDataSource1" BackColor="#DEBA84" BorderColor="#DEBA84" BorderStyle="None" BorderWidth="1px" CellPadding="3" CellSpacing="2" Width="600px">
+                    <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="OrderID" DataSourceID="SqlDataSource1" CellPadding="4" Width="600px" ForeColor="#333333" GridLines="None" OnSelectedIndexChanged="GridView2_SelectedIndexChanged">
+                        <AlternatingRowStyle BackColor="White" />
                         <Columns>
                             <asp:CommandField ShowSelectButton="True" />
                             <asp:BoundField DataField="OrderID" HeaderText="OrderID" InsertVisible="False" ReadOnly="True" SortExpression="OrderID" />
                             <asp:BoundField DataField="Order_Fulfilled_Date" HeaderText="Order_Fulfilled_Date" SortExpression="Order_Fulfilled_Date" />
                             <asp:BoundField DataField="Order_Status" HeaderText="Order_Status" SortExpression="Order_Status" />
                         </Columns>
-                        <FooterStyle BackColor="#F7DFB5" ForeColor="#8C4510" />
-                        <HeaderStyle BackColor="#A55129" Font-Bold="True" ForeColor="White" />
-                        <PagerStyle ForeColor="#8C4510" HorizontalAlign="Center" />
-                        <RowStyle BackColor="#FFF7E7" ForeColor="#8C4510" />
-                        <SelectedRowStyle BackColor="#738A9C" Font-Bold="True" ForeColor="White" />
-                        <SortedAscendingCellStyle BackColor="#FFF1D4" />
-                        <SortedAscendingHeaderStyle BackColor="#B95C30" />
-                        <SortedDescendingCellStyle BackColor="#F1E5CE" />
-                        <SortedDescendingHeaderStyle BackColor="#93451F" />
+                        <EditRowStyle BackColor="#2461BF" />
+                        <FooterStyle BackColor="#507CD1" ForeColor="White" Font-Bold="True" />
+                        <HeaderStyle BackColor="#507CD1" Font-Bold="True" ForeColor="White" />
+                        <PagerStyle ForeColor="White" HorizontalAlign="Center" BackColor="#2461BF" />
+                        <RowStyle BackColor="#EFF3FB" />
+                        <SelectedRowStyle BackColor="#D1DDF1" Font-Bold="True" ForeColor="#333333" />
+                        <SortedAscendingCellStyle BackColor="#F5F7FB" />
+                        <SortedAscendingHeaderStyle BackColor="#6D95E1" />
+                        <SortedDescendingCellStyle BackColor="#E9EBEF" />
+                        <SortedDescendingHeaderStyle BackColor="#4870BE" />
                     </asp:GridView>
+                    <br />
+                    <asp:Calendar ID="Calendar1" runat="server"></asp:Calendar>
                     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="SELECT dbo.Orders.OrderID, dbo.Orders.Order_Fulfilled_Date, dbo.Order_Packages.[TotalAmount], dbo.Orders.Order_Status FROM dbo.Orders INNER JOIN dbo.Order_Packages ON dbo.Orders.OrderID = dbo.Order_Packages.OrderID WHERE  dbo.Orders.UserId = (SELECT UserId FROM [Users] WHERE ([UserName] = @UserName))">
                         <SelectParameters>
                             <asp:SessionParameter Name="UserName" SessionField="UserName" Type="Object" />
@@ -37,7 +41,8 @@
                     <br /><br />
                     <asp:Label ID="Label1" runat="server" Text=""></asp:Label>
                     <br />
-                    <asp:Button ID="Button1" runat="server" Text="Cancel Order" OnClick="Button1_Click" />
+                    <asp:Button ID="Button1" runat="server" Text="Cancel Order" OnClick="Button1_Click" /> 
+                    <asp:Button ID="Button2" runat="server" Text="Update Fulfillment date" OnClick="Button2_Click" />
                 </div>
                 <br /><br />
             </div>

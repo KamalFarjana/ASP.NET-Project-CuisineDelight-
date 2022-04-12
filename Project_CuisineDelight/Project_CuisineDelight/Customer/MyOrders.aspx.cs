@@ -28,7 +28,6 @@ namespace Project_CuisineDelight.Customer
         protected void Button1_Click(object sender, EventArgs e)
         {
             SqlConnection myconnection = new SqlConnection(connectionString);
-            SqlCommand mycommand = new SqlCommand("ChangeOrderStatus", myconnection);
 
             string Ostatus = GridView2.SelectedRow.Cells[3].Text;
 
@@ -51,6 +50,31 @@ namespace Project_CuisineDelight.Customer
             {
                 Label1.Text = "You can't cancel this order. Please check the order status.";
             }
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            SqlConnection myconnection = new SqlConnection(connectionString);
+
+            DateTime timeselected = Calendar1.SelectedDate;
+
+            using (SqlConnection mycon = new SqlConnection(connectionString))
+            {
+                SqlCommand mycom = new SqlCommand("UpdateFulfilmentDate", mycon);
+                mycom.CommandType = CommandType.StoredProcedure;
+                mycom.Parameters.Add("@OrderID", SqlDbType.Int).Value = GridView2.SelectedRow.Cells[1].Text;
+                mycom.Parameters.Add("@Date", SqlDbType.DateTime).Value = timeselected;
+                mycon.Open();
+                mycom.ExecuteNonQuery();
+                mycon.Close();
+                Label1.Text = "Fulfilment date has been updated.";
+                GridView2.DataBind();
+            }
+        }
+
+        protected void GridView2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Label1.Text = "";
         }
     }
 }
