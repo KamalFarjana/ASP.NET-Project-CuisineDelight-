@@ -142,6 +142,7 @@
     <Content Include="CatererFolder\ListPackageOfCaterer.ascx" />
     <Content Include="CatererFolder\Orders.aspx" />
     <Content Include="CatererFolder\WebForm1.aspx" />
+    <Content Include="CatererLogin.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -167,6 +168,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="Login.aspx" />
+    <Content Include="LoginSelectionAsCatereorCustomer.aspx" />
     <Content Include="Master\FrontEnd.Master" />
     <Content Include="Profile Pictures\istockphoto-1293539824-170667a.jpg" />
     <Content Include="SearchCatererItemShow.ascx" />
@@ -391,6 +393,13 @@
     <Compile Include="CatererFolder\WebForm1.aspx.designer.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CatererLogin.aspx.cs">
+      <DependentUpon>CatererLogin.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CatererLogin.aspx.designer.cs">
+      <DependentUpon>CatererLogin.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -454,6 +463,13 @@
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="LoginSelectionAsCatereorCustomer.aspx.cs">
+      <DependentUpon>LoginSelectionAsCatereorCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="LoginSelectionAsCatereorCustomer.aspx.designer.cs">
+      <DependentUpon>LoginSelectionAsCatereorCustomer.aspx</DependentUpon>
     </Compile>
     <Compile Include="Master\FrontEnd.Master.cs">
       <DependentUpon>FrontEnd.Master</DependentUpon>
